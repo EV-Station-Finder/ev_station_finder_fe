@@ -1,0 +1,30 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2
+
+jobs:
+  build:
+    working_directory: ~/ev_station_finder_fe
+    docker:
+      - image: circleci/ruby:2.5.3-node-browsers
+        environment:
+          PGHOST: localhost
+          PGUSER: ev_station_finder_fe
+          RAILS_ENV: test
+      - image: postgres:13.2
+        environment:
+          POSTGRES_USER: ev_station_finder_fe
+          POSTGRES_DB: ev_station_finder_fe_test
+          POSTGRES_PASSWORD:
+    steps:
+      - checkout
+      - run: gem install bundler:2.2.23
+      - run:
+          name: ev_station_finder_fe
+          command: bundle -v
+      - ruby/bundle-install
+
+      - checkout
+      - run: bundle install --path vendor/bundle
+      - run: bundle exec rake db:create
+      - run: bundle exec rspec
