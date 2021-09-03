@@ -1,0 +1,23 @@
+class Station
+  attr_reader :name,
+              :distance,
+              :status,
+              :hours,
+              :ev_network,
+              :street_address,
+              :city,
+              :state,
+              :zip_code
+
+  def initialize(station_data)
+    @name           = station_data[:name]
+    @distance       = station_data[:distance]
+    @status         = station_data[:status]
+    @hours          = station_data[:hours]
+    @ev_network     = station_data[:ev_network]
+    @street_address = station_data[:street_address]
+    @city           = station_data[:city]
+    @state          = station_data[:state]
+    @zip_code       = station_data[:zip_code]
+  end
+end
