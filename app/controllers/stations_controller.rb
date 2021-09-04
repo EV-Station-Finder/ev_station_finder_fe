@@ -1,5 +1,5 @@
 class StationsController < ApplicationController
   def index
-    @stations = StationsFacade.get_stations(params[:location])
+    @stations = StationFacade.get_stations(params[:location])
   end
 end

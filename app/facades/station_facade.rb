@@ -1,4 +1,4 @@
-class StationsFacade
+class StationFacade
   def self.get_stations(location)
     stations = StationService.get_stations(location)
     stations[:data].map do |station|
