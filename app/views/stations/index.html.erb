@@ -1,0 +1,13 @@
+<h1>Nearest Stations</h1>
+<% @stations.each_with_index do |station, index| %>
+  <div id="station-<%= index %>"> 
+  <h3><%= station.name %></h3>
+  <p><%= station.street_address %></p>
+  <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
+  <p>Status: <%= station.status %></p>
+  <p>Hours: <%= station.hours %></p>
+  <p>Network: <%= station.ev_network %></p>
+  <p>Distance from Search location: <%= station.distance %> miles</p>
+  <br>
+  </div>
+<% end %>
