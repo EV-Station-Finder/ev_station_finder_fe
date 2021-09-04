@@ -24,10 +24,10 @@ RSpec.describe "As a guest user" do
         expect(page).to have_content(@station1[:city])
         expect(page).to have_content(@station1[:state])
         expect(page).to have_content(@station1[:zip_code])
-        expect(page).to have_content(@station1[:status])
-        expect(page).to have_content(@station1[:hours])
-        expect(page).to have_content(@station1[:ev_network])
-        expect(page).to have_content(@station1[:distance])
+        expect(page).to have_content("Status: #{@station1[:status]}")
+        expect(page).to have_content("Hours: #{@station1[:hours]}")
+        expect(page).to have_content("Network: #{@station1[:ev_network]}")
+        expect(page).to have_content("Distance from Search location: #{@station1[:distance]} miles")
       end
     end
   end
