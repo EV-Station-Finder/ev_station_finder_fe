@@ -5,4 +5,7 @@ class StationService
 
     body = JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.get_station(api_id)  
+  end
 end
