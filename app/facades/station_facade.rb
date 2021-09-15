@@ -8,6 +8,6 @@ class StationFacade
 
   def self.get_station(api_id)
     station = StationService.get_station(api_id)
-    StationDetails.new(station[:attributes])
+    StationDetails.new(station[:data][:attributes])
   end
 end
