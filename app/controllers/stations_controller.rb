@@ -4,6 +4,6 @@ class StationsController < ApplicationController
   end
 
   def show
-    @station = StationFacade.get_station(params[:api_id])
+    @station = StationFacade.get_station(params[:id])
   end
 end
