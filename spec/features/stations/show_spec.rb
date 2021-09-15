@@ -85,18 +85,19 @@ RSpec.describe "As a guest user" do
 
       visit "/stations/#{@station1[:api_id]}"
 
-      # expect(page).to have_content("Nearest Stations")
-      # within("#station-0") do
-      #   expect(page).to have_content(@station1[:name])
-      #   expect(page).to have_content(@station1[:address])
-      #   expect(page).to have_content(@station1[:city])
-      #   expect(page).to have_content(@station1[:state])
-      #   expect(page).to have_content(@station1[:zip_code])
-      #   expect(page).to have_content("Status: #{@station1[:status]}")
-      #   expect(page).to have_content("Hours: #{@station1[:hours]}")
-      #   expect(page).to have_content("Network: #{@station1[:ev_network]}")
-      #   expect(page).to have_content("Distance from Search location: #{@station1[:distance]} miles")
-      # end
+      expect(page).to have_content(@station1[:name])
+      expect(page).to have_content(@station1[:address])
+      expect(page).to have_content(@station1[:city])
+      expect(page).to have_content(@station1[:state])
+      expect(page).to have_content(@station1[:zip_code])
+      expect(page).to have_content("Status: #{@station1[:status]}")
+      expect(page).to have_content("Hours: #{@station1[:hours]}")
+      expect(page).to have_content("Network: #{@station1[:ev_network]}")
+      expect(page).to have_content("Network: #{@station1[:accepted_payments]}")
+      expect(page).to have_content("10 Hour Forecast")
+      within("#forecast-0") do
+        expect(page).to have_content("forecast href")
+      end
     end
   end
 end
