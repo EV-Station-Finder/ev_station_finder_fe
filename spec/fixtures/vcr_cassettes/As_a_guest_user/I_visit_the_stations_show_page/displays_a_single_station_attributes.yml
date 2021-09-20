@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations/152087
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 20 Sep 2021 22:33:16 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"06e1b790b4c7658eb9c0fc45107720bb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e94d1616-c1c8-4638-a302-646f6b75bd80
+      X-Runtime:
+      - '0.455293'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
+        General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":null,"street_address":"2375
+        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
+        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"22:33","temperature":75.38,"conditions":"light
+        rain","icon":"10d"},{"time":"22:00","temperature":75.09,"conditions":"moderate
+        rain","icon":"10d"},{"time":"23:00","temperature":75.38,"conditions":"very
+        heavy rain","icon":"10d"},{"time":"00:00","temperature":72.32,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"01:00","temperature":69.06,"conditions":"light
+        rain","icon":"10n"},{"time":"02:00","temperature":65.19,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"03:00","temperature":61.02,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"04:00","temperature":57.09,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"05:00","temperature":56.62,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"06:00","temperature":56.91,"conditions":"overcast
+        clouds","icon":"04n"}]}}}'
+  recorded_at: Mon, 20 Sep 2021 22:33:17 GMT
+recorded_with: VCR 6.0.0
