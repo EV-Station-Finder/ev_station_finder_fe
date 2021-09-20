@@ -18,6 +18,7 @@ RSpec.describe "As a guest user" do
       visit "/stations?location=denver,co"
 
       expect(page).to have_content("Nearest Stations")
+
       within("#station-0") do
         expect(page).to have_content(@station1[:name])
         expect(page).to have_content(@station1[:address])
