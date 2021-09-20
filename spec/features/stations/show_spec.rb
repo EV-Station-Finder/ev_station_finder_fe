@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "As a guest user" do
   describe "I visit the stations show page" do
-    it "displays a single station attributes" do
+    it "displays a single station attributes", :vcr do
       @station1 =  {
             "name": "Casey's General Store",
             "api_id": 152087,
@@ -21,10 +21,10 @@ RSpec.describe "As a guest user" do
             ],
             "hourly_weather": [
                 {
-                    "time": "21:07",
-                    "temperature": 69.44,
-                    "conditions": "clear sky",
-                    "icon": "01d"
+                    "time": "22:33",
+                    "temperature": 75.44,
+                    "conditions": "light rain",
+                    "icon": "10d"
                 },
                 {
                     "time": "21:00",
@@ -86,18 +86,18 @@ RSpec.describe "As a guest user" do
       visit "/stations/#{@station1[:api_id]}"
 
       expect(page).to have_content(@station1[:name])
-      expect(page).to have_content(@station1[:address])
-      expect(page).to have_content(@station1[:city])
-      expect(page).to have_content(@station1[:state])
-      expect(page).to have_content(@station1[:zip_code])
+      expect(page).to have_content("Address: #{@station1[:street_address]}, #{@station1[:city]}, #{@station1[:state]} #{@station1[:zip_code]}")
       expect(page).to have_content("Status: #{@station1[:status]}")
       expect(page).to have_content("Hours: #{@station1[:hours]}")
-      expect(page).to have_content("Network: #{@station1[:ev_network]}")
-      expect(page).to have_content("Network: #{@station1[:accepted_payments]}")
+      # expect(page).to have_content("EV Network: #{@station1[:ev_network]}")
       expect(page).to have_content("10 Hour Forecast")
       within("#forecast-0") do
-        expect(page).to have_content("forecast href")
+        expect(page).to have_content(@station1[:hourly_weather][0][:time])
+        expect(page).to have_content(@station1[:hourly_weather][0][:temperature].to_i)
+        expect(page).to have_content(@station1[:hourly_weather][0][:conditions])
+        # expect(page).to have_link("https://openweathermap.org/img/wn/#{@station1[:hourly_weather][0][:icon]}@2x.png")
       end
+      expect(page).to have_content("Accepted Payments: #{@station1[:accepted_payments]}")
     end
   end
 end
