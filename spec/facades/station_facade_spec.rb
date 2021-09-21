@@ -12,7 +12,7 @@ RSpec.describe StationFacade do
   end
   
   describe "::get_station" do
-    xit "should return an array of station objects", :vcr do
+    it "should return an array of station objects", :vcr do
       id = 152087
       result = StationFacade.get_station(id)
 
