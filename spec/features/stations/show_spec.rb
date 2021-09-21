@@ -95,9 +95,12 @@ RSpec.describe "As a guest user" do
         expect(page).to have_content(@station1[:hourly_weather][0][:time])
         expect(page).to have_content(@station1[:hourly_weather][0][:temperature].to_i)
         expect(page).to have_content(@station1[:hourly_weather][0][:conditions])
-        # expect(page).to have_link("https://openweathermap.org/img/wn/#{@station1[:hourly_weather][0][:icon]}@2x.png")
+        # expect(page).to have_xpath("https://openweathermap.org/img/wn/#{@station1[:hourly_weather][0][:icon]}@2x.png")
+        expect(page).to have_css("img[src*='https://openweathermap.org/img/wn/#{@station1[:hourly_weather][0][:icon]}@2x.png']")
       end
-      expect(page).to have_content("Accepted Payments: #{@station1[:accepted_payments]}")
+      within("#accepted_payment-0") do
+        expect(page).to have_content("American Express")
+      end
     end
   end
 end
