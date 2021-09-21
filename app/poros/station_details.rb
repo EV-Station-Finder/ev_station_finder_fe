@@ -1,5 +1,6 @@
 class StationDetails
   attr_reader :name,
+              :api_id,
               :status,
               :hours,
               :ev_network,
@@ -12,6 +13,7 @@ class StationDetails
 
   def initialize(station_data)
     @name              = station_data[:name]
+    @api_id            = station_data[:api_id]
     @status            = station_data[:status]
     @hours             = station_data[:hours]
     @ev_network        = station_data[:ev_network]
