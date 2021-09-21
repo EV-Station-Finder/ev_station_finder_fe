@@ -21,7 +21,7 @@ RSpec.describe "As a guest user" do
 
       within("#station-0") do
         expect(page).to have_content(@station1[:name])
-        expect(page).to have_content(@station1[:address])
+        expect(page).to have_content(@station1[:street_address])
         expect(page).to have_content(@station1[:city])
         expect(page).to have_content(@station1[:state])
         expect(page).to have_content(@station1[:zip_code])
