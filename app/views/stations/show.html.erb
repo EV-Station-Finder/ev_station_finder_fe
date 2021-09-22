@@ -1,0 +1,20 @@
+<h1><%= @station.name %></h1>
+<h3>Status: <%= @station.status %></h3>
+<h3>Hours: <%= @station.hours %></h3>
+<h3>EV Network: <%= @station.ev_network %></h3>
+<h3>Accepted Payments:</h3>
+<% @station.accepted_payments.each_with_index do |payment, index| %>
+  <div id="accepted_payment-<%= index %>">
+  <h3><li><%= payment %></li></h3>
+  </div>
+<% end %>
+<h3>Address: <%= @station.street_address %>, <%= @station.city %>, <%= @station.state %> <%= @station.zip_code %></h3>
+<h2> 10 Hour Forecast </h2> 
+<% @station.hourly_weather.each_with_index do |weather, index| %>
+  <div id="forecast-<%= index %>">
+  <p><%= weather[:time] %>
+  <div class="user-image" >
+  <%=  image_tag("https://openweathermap.org/img/wn/#{weather[:icon]}@2x.png", align: "center")%>
+  </div>
+  <%= weather[:temperature].to_i %>° <%= weather[:conditions] %></p>
+<% end %>

@@ -5,4 +5,9 @@ class StationFacade
       Station.new(station[:attributes])
     end
   end
+
+  def self.get_station(api_id)
+    station = StationService.get_station(api_id)
+    StationDetails.new(station[:data][:attributes])
+  end
 end

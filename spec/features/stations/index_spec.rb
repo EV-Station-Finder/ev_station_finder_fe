@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "As a guest user" do
   describe "I visit the stations index page" do
-    it "displays each station with corresponding attributes" do
+    it "displays each station with corresponding attributes", :vcr do
       @station1 =  {
                       "name": "Ideal Market Capitol Hill",
                       "distance": 0.59729,
@@ -14,13 +14,14 @@ RSpec.describe "As a guest user" do
                       "state": "CO",
                       "zip_code": "80218"
                     }
-      
+
       visit "/stations?location=denver,co"
-                      
+
       expect(page).to have_content("Nearest Stations")
+
       within("#station-0") do
         expect(page).to have_content(@station1[:name])
-        expect(page).to have_content(@station1[:address])
+        expect(page).to have_content(@station1[:street_address])
         expect(page).to have_content(@station1[:city])
         expect(page).to have_content(@station1[:state])
         expect(page).to have_content(@station1[:zip_code])
