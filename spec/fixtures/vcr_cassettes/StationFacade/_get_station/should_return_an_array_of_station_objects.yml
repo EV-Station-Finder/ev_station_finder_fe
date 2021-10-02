@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 21 Sep 2021 23:12:29 GMT
+      - Sat, 02 Oct 2021 15:47:38 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"fb793a76bc254e6de3a6cd47a5e544a2"
+      - W/"633a7882e01f89abae7786290dea7180"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d3890efe-8083-437b-8d38-ac19b18ce87a
+      - 30d9e274-324f-4bf8-a60c-84c8f9b0b2bf
       X-Runtime:
-      - '0.448264'
+      - '0.446961'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -43,18 +43,18 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
-        General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":null,"street_address":"2375
+        General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"2375
         St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
-        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"23:12","temperature":65.23,"conditions":"scattered
-        clouds","icon":"03d"},{"time":"23:00","temperature":65.23,"conditions":"scattered
-        clouds","icon":"03d"},{"time":"00:00","temperature":64.53,"conditions":"scattered
-        clouds","icon":"03d"},{"time":"01:00","temperature":63.5,"conditions":"broken
-        clouds","icon":"04n"},{"time":"02:00","temperature":62.19,"conditions":"broken
-        clouds","icon":"04n"},{"time":"03:00","temperature":60.22,"conditions":"overcast
-        clouds","icon":"04n"},{"time":"04:00","temperature":57.97,"conditions":"overcast
-        clouds","icon":"04n"},{"time":"05:00","temperature":57.31,"conditions":"overcast
-        clouds","icon":"04n"},{"time":"06:00","temperature":56.5,"conditions":"overcast
-        clouds","icon":"04n"},{"time":"07:00","temperature":51.37,"conditions":"few
-        clouds","icon":"02n"}]}}}'
-  recorded_at: Tue, 21 Sep 2021 23:12:29 GMT
+        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"15:47","temperature":68.11,"conditions":"broken
+        clouds","icon":"04d"},{"time":"15:00","temperature":68.11,"conditions":"broken
+        clouds","icon":"04d"},{"time":"16:00","temperature":68.11,"conditions":"broken
+        clouds","icon":"04d"},{"time":"17:00","temperature":69.37,"conditions":"broken
+        clouds","icon":"04d"},{"time":"18:00","temperature":71.1,"conditions":"broken
+        clouds","icon":"04d"},{"time":"19:00","temperature":72.01,"conditions":"light
+        rain","icon":"10d"},{"time":"20:00","temperature":73.26,"conditions":"light
+        rain","icon":"10d"},{"time":"21:00","temperature":74.41,"conditions":"light
+        rain","icon":"10d"},{"time":"22:00","temperature":73.67,"conditions":"light
+        rain","icon":"10d"},{"time":"23:00","temperature":70.07,"conditions":"light
+        rain","icon":"10d"}]}}}'
+  recorded_at: Sat, 02 Oct 2021 15:47:38 GMT
 recorded_with: VCR 6.0.0
