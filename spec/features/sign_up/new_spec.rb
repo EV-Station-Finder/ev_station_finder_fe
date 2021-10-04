@@ -5,7 +5,7 @@ RSpec.describe 'Sign Up Page' do
     it 'Registration page should include' do
       visit root_path
       click_link 'Sign Up'
-      expect(current_path).to eq('/signup') # TODO: change to path helper
+      expect(current_path).to eq(sign_up_path) # TODO: change to path helper
       fill_in :first_name, with: "fn"
       fill_in :last_name, with: "ln"
       fill_in :email, with: "email@email.email"
@@ -15,10 +15,12 @@ RSpec.describe 'Sign Up Page' do
       fill_in :zip_code, with: "12345"
       fill_in :password, with: "pw"
       fill_in :password_confirmation, with: "pw"
-      click_button "Submit"
+      click_button "Sign Up"
 
       expect(current_path).to eq('/dashboard')
       expect(new_user.first_name).to eq('fn')
     end
   end
 end
+#TODO Add sad paths
+#Add check to make sure password and password_confirmation work
