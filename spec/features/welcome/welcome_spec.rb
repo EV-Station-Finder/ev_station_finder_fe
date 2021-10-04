@@ -15,11 +15,11 @@ RSpec.describe 'Welcome page' do
     end
 
     it "I can see the registration button for new users" do
-      expect(page).to have_button("Sign Up")
+      expect(page).to have_link("Sign Up")
     end
 
     it "I can see the login button for registered users" do
-      expect(page).to have_button("Log In")
+      expect(page).to have_link("Log In")
     end
 
     describe 'When I fill in the login form' do
