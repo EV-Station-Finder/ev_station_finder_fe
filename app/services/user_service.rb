@@ -14,7 +14,6 @@ class UserService
     # faraday.headers['ACCEPT'] = "application/json"
     # faraday.headers['Content-Type'] = "application/json"
     # faraday.params = user_params.to_json
-  end
     parse_json(response)
   end
 
