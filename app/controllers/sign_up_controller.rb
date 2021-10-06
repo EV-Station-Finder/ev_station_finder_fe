@@ -7,9 +7,14 @@ class SignUpController < ApplicationController
     # if password != password_confirmation
     #   render ____
     # else
-    @user = UserFacade.create_user(user_params)
-    #   #redirect_to dashboard_path(@user)
-    # end
+    user = UserFacade.create_user(user_params)
+    if user
+      session[:user_id] = user.id
+      session[:welcome] = "Welcome, #{new_user.email}!"
+      redirect_to dashboard_path(user)
+    else
+      render :new
+    end
   end
   
   private
