@@ -8,7 +8,7 @@ RSpec.describe 'Sign Up Page' do
       expect(current_path).to eq(sign_up_path) # TODO: change to path helper
       fill_in :first_name, with: "fn"
       fill_in :last_name, with: "ln"
-      fill_in :email, with: "email@email.email"
+      fill_in :email, with: "mail@email.email"
       fill_in :street_address, with: "sa"
       fill_in :city, with: "c"
       fill_in :state, with: "s"
@@ -24,3 +24,4 @@ RSpec.describe 'Sign Up Page' do
 end
 #TODO Add sad paths
 #Add check to make sure password and password_confirmation work
+# Accomodate response from backend: {errors: "error message"}
