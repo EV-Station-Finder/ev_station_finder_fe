@@ -3,16 +3,12 @@ class SignUpController < ApplicationController
   end
   
   def create
-    #TODO call backend to create user
-    # if password != password_confirmation
-    #   render ____
-    # else
     user = UserFacade.create_user(user_params)
     if user
       session[:user_id] = user.id
-      session[:welcome] = "Welcome, #{new_user.email}!"
-      redirect_to dashboard_path(user)
+      redirect_to dashboard_path(user.id)
     else
+      flash[:error] = user[:errors]
       render :new
     end
   end
