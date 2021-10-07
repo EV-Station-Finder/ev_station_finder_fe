@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/sign_up", to: "sign_up#new"
   post "/sign_up", to: "sign_up#create"
   post "/log_in", to: "log_in#create"
+  resources :dashboard, only: :show
 end
