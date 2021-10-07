@@ -1,16 +1,18 @@
 class User
-  attr_reader :email,
+  attr_reader :id,
+              :email,
               :street_address,
               :city,
               :state,
               :zip_code
 
   def initialize(user_data)
-    @email = user_data[:email]
-    @street_address = user_data[:street_address]
-    @city = user_data[:city]
-    @state = user_data[:state]
-    @zip_code = user_data[:zip_code]
+    @id = user_data[:data][:id]
+    @email = user_data[:data][:attributes][:email]
+    @street_address = user_data[:data][:attributes][:street_address]
+    @city = user_data[:data][:attributes][:city]
+    @state = user_data[:data][:attributes][:state]
+    @zip_code = user_data[:data][:attributes][:zip_code]
   end
 end
 
