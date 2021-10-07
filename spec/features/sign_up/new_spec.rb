@@ -17,7 +17,7 @@ RSpec.describe 'Sign Up Page' do
       fill_in :password_confirmation, with: "pw"
       click_button "Sign Up"
       #Need to figure out a way to get user_id to test. Mock and stub?
-      expect(current_path).to eq(dashboard_path(session[:user_id]))
+      expect(current_path).to eq(dashboard_path(user_id)
       # expect(new_user.first_name).to eq('fn')
     end
   end
