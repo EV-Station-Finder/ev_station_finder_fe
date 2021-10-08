@@ -3,8 +3,8 @@ class SignUpController < ApplicationController
   end
   
   def create
-    user = UserFacade.create_user(user_params)
-    if user
+    user = UserService.create_user(user_params)
+    if user[:data]
       session[:user_id] = user.id
       redirect_to dashboard_path(user.id)
     else
