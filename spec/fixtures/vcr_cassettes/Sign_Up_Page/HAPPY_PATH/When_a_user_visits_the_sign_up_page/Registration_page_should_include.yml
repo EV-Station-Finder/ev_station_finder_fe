@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?city=c&email=kemail5@email.email&first_name=fn&last_name=ln&password=pw&state=s&street_address=sa&zip_code=12345
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 08 Oct 2021 22:33:57 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3195a923307bf6747c75e393c0317c75"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bc840d01-057b-4f5b-b7e3-962600ec2699
+      X-Runtime:
+      - '0.259198'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"user","attributes":{"first_name":"fn","last_name":"ln","email":"kemail5@email.email","street_address":"sa","city":"c","state":"s","zip_code":"12345"}}}'
+  recorded_at: Fri, 08 Oct 2021 22:33:57 GMT
+recorded_with: VCR 6.0.0
