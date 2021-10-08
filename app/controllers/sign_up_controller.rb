@@ -5,10 +5,10 @@ class SignUpController < ApplicationController
   def create
     user = UserService.create_user(user_params)
     if user[:data]
-      session[:user_id] = user.id
-      redirect_to dashboard_path(user.id)
+      session[:user_id] = user[:data][:id]
+      redirect_to dashboard_path(user[:data][:id])
     else
-      flash[:error] = user[:errors]
+      flash[:errors] = user[:errors]
       render :new
     end
   end
