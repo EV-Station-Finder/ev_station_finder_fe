@@ -1,7 +1,20 @@
+<% if flash[:errors] %>
+<h2><%= flash[:errors] %></h2>
+<% end %>
+
 <h1>Welcome to EV Station Finder</h1>
 <p>Search for nearby EV charging stations and get pertinent
    information about them such as a 10 hour forecast and
    driving directions from your set location. Register for an
    account to save your favorite stations</p>
 <%= link_to "Sign Up", sign_up_path %>
-<%= link_to "Log In", log_in_path, method: :post %>
+<br>
+<%= form_with url: log_in_path, local: true, method: :post do |f|%>
+  <%= f.label :email, "email: " %>
+  <%= f.text_field :email, required: true %>
+  <br>
+  <%= f.label :password, "Password: " %>
+  <%= f.password_field :password, required: true %>
+  <br>
+  <%= f.submit "Log In" %>
+<% end %>
