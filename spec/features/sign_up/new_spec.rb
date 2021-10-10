@@ -78,7 +78,7 @@ RSpec.describe 'Sign Up Page' do
         expect(page).to have_content("Validation failed: Email is invalid")
       end
     end
-    #TODO 
+    # TODO 
     # Test authorization
     # Add check to make sure password and password_confirmation work
   end
