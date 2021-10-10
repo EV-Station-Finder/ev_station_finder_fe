@@ -16,6 +16,14 @@ class UserService
     # faraday.params = user_params.to_json
     parse_json(response)
   end
+  
+  def self.log_in_user(user_params)
+    response = conn.post("/api/v1/sessions") do |faraday|
+      faraday.params['email'] = user_params[:email]
+      faraday.params['password'] = user_params[:password]
+    end
+    parse_json(response)
+  end
 
   def self.get_station(api_id)
     response = conn.get("/api/v1/stations/#{api_id}")
