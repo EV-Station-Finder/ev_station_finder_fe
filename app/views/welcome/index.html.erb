@@ -7,10 +7,10 @@
    information about them such as a 10 hour forecast and
    driving directions from your set location. Register for an
    account to save your favorite stations</p>
-<%= link_to "Sign Up", sign_up_path %>
-<br>
+
+Log In:
 <%= form_with url: log_in_path, local: true, method: :post do |f|%>
-  <%= f.label :email, "email: " %>
+  <%= f.label :email, "Email: " %>
   <%= f.text_field :email, required: true %>
   <br>
   <%= f.label :password, "Password: " %>
@@ -18,3 +18,5 @@
   <br>
   <%= f.submit "Log In" %>
 <% end %>
+
+<p>Don't have an account? <%= link_to "Sign Up", sign_up_path %></p>
