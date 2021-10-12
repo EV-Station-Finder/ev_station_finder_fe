@@ -19,23 +19,23 @@ RSpec.describe 'Welcome page' do
     end
 
     it "I can see the login button for registered users" do
-      expect(page).to have_link("Log In")
+      expect(page).to have_button("Log In")
     end
 
     describe 'When I fill in the login form' do
-      before do
-        # visit '/signup'
-        # TODO: create a user that can login in our next test
-        # email = "example@example.com"
-        # password = "securepassword"
-        # @user = User.create!(email: email, password: password)
+      xit "I can see an area to enter my login information" do
+        fill_in :email, with: "whatever55@example.com"
+        fill_in :password, with: "password"
+        click_button "Log In"
+        expect(current_path).to eq('/dashboard')
       end
+    end
 
-      it "I can see an area to enter my login information" do
-        # fill_in :email, with: @user.email
-        # fill_in :password, with: @user.password
-        # click_button "Log In"
-        # expect(current_path).to eq('/dashboard')
+    describe 'When I use the quick search option' do
+      it "I can see an area to do a quick search for stations" do
+        fill_in :location, with: "Las Vegas, Nevada"
+        click_button "Find Stations"
+        expect(current_path).to eq(stations_path)
       end
     end
   end
