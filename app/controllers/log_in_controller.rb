@@ -2,7 +2,7 @@ class LogInController < ApplicationController
   def create
     user = UserService.log_in_user(user_params)
     if user[:data]
-      session[:user_id] = user[:data][:token]
+      session[:token] = user[:data][:token]
       redirect_to dashboard_path
     else
       flash[:errors] = user[:errors]
