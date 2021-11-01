@@ -23,7 +23,7 @@ RSpec.describe 'Welcome page' do
     end
 
     describe 'When I fill in the login form' do
-      xit "I can see an area to enter my login information" do
+      it "I can see an area to enter my login information" do
         fill_in :email, with: "whatever55@example.com"
         fill_in :password, with: "password"
         click_button "Log In"
