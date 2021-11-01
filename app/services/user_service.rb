@@ -25,11 +25,6 @@ class UserService
     parse_json(response)
   end
 
-  def self.get_station(api_id)
-    response = conn.get("/api/v1/stations/#{api_id}")
-    parse_json(response)
-  end
-
   def self.conn
     Faraday.new(url: "https://ev-station-finder-backend.herokuapp.com")
   end
