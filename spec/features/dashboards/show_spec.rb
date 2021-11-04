@@ -61,8 +61,6 @@ RSpec.describe "As a registered user" do
                                 "zip_code": "54720"
                               }
 
-
-
         within(".favorite-stations") do
           expect(page).to have_content("Favorite Stations")
         end
