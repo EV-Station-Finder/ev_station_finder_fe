@@ -1,4 +1,4 @@
-# EV Station Finder - Backend
+# EV Station Finder - Frontend
 Description/general information coming soon
 
 ### Authors
@@ -12,12 +12,8 @@ Description/general information coming soon
   - [Usage](#usage)
   - [Running the tests](#running-the-tests)
   - [Roadmap](#roadmap)
-  - [Endpoints](#endpoints)
   - [Contributing](#contributing)
   - [Acknowledgements](#acknowledgements)
-
-## Learning Goals
-Coming soon
 
 ## Built With
 
