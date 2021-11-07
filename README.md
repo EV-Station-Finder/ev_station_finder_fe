@@ -18,15 +18,16 @@ Description/general information coming soon
 ## Built With
 
 * [Ruby on Rails](https://rubyonrails.org)
+* [RSpec](https://github.com/rspec/rspec-rails)
 
 ### Gems Used
 - [Faraday](https://github.com/lostisland/faraday)
-- [Bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)
 - [Webmock](https://github.com/bblimke/webmock)
 - [VCR](https://github.com/vcr/vcr)
+- [Pry](https://github.com/pry/pry)
+- [SimpleCov](https://github.com/simplecov-ruby/simplecov)
 
 
-<!-- ## Service Oriented Architecture Diagram -->
 ### Prerequisites
 
 To run this application you will need
@@ -60,17 +61,6 @@ To get a local copy up and running follow these simple steps:
 
 ## Roadmap
  Coming soon
-
-## Endpoints
-1. Search for stations
-
-
-2. Station View Page
-
-
-3. Users
-  - Guest user can browse stations nearby
-  - A user can register for an account and login for added features
 
 ## Contributing
 
