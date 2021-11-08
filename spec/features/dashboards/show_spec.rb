@@ -3,24 +3,26 @@ require 'rails_helper'
 RSpec.describe "As a registered user" do
   describe "I log in then I am redirected to my dashboard page" do
     describe 'HAPPY PATH' do
-      before :all do
+      before :each do
         visit root_path
         fill_in :email, with: "wizard@hogwarts.com"
         fill_in :password, with: "verysecurepassword"
         click_button 'Log In'
       end
 
-      it "displays a welcome message using my email", :vcr do
-        save_and_open_page
+      it "displays a welcome message using my email" do
         expect(page).to have_content("Welcome wizard@hogwarts.com")
       end
 
-      it "displays a search bar to lookup nearest stations", :vcr do
+      it "displays a search bar to lookup nearest stations" do      
         expect(page).to have_field("location")
         expect(page).to have_button("Find Stations")
+        fill_in :location, with: "Las Vegas, Nevada"
+        click_button "Find Stations"
+        expect(current_path).to eq(stations_path)
       end
 
-      it "displays the three closest stations to my saved address", :vcr do
+      it "displays the three nearest stations to my saved address" do
         @station1 =  {
                         "name": "Ideal Market Capitol Hill",
                         "distance": 0.59729,
@@ -33,7 +35,7 @@ RSpec.describe "As a registered user" do
                         "zip_code": "80218"
                       }
 
-        expect(page).to have_content("Here are the 3 stations closest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
+        expect(page).to have_content("Here are the 3 stations nearest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
 
         within("#station-0") do
           expect(page).to have_content(@station1[:name])
@@ -48,10 +50,10 @@ RSpec.describe "As a registered user" do
         end
       end
 
-      it "displays my favorite stations", :vcr do
+      it "displays my favorite stations" do
         @favorite_station =  {
                                 "name": "Casey's General Store",
-                                "distance": 0.59729,
+                                "distance": nil,
                                 "status": "Available",
                                 "hours": "24 hours daily",
                                 "ev_network": "Non-Networked",
@@ -62,7 +64,7 @@ RSpec.describe "As a registered user" do
                               }
 
         within(".favorite-stations") do
-          expect(page).to have_content("Favorite Stations")
+          expect(page).to have_content("Favorite Stations:")
         end
 
         within("#favorite-station-0") do
@@ -74,7 +76,6 @@ RSpec.describe "As a registered user" do
           expect(page).to have_content("Status: #{@favorite_station[:status]}")
           expect(page).to have_content("Hours: #{@favorite_station[:hours]}")
           expect(page).to have_content("Network: #{@favorite_station[:ev_network]}")
-          expect(page).to have_content("Distance from Search location: #{@favorite_station[:distance]} miles")
         end
       end
 
@@ -93,7 +94,8 @@ RSpec.describe "As a registered user" do
 
     describe 'SAD PATH' do
       it "Add sad path"
-
+# Account for unsuccessful nearest stations call>>@nearest_stations[:errors]
+# Account for unsuccessful favorite stations call>>@favorite_stations[:errors]
     end
   end
 end
