@@ -31,6 +31,13 @@ class UserService
     end
     parse_json(response)
   end
+  
+  def self.get_favorite_stations(user_token)
+    response = conn.get("/api/v1/favorite_stations") do |faraday|
+      faraday.params['token'] = user_token
+    end
+    parse_json(response)
+  end
 
   def self.conn
     Faraday.new(url: "https://ev-station-finder-backend.herokuapp.com")
