@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?city=c&email=kemail5@email.email&first_name=fn&last_name=ln&password=pw&state=s&street_address=sa&zip_code=12345
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?city=c&email=kemail5@email.com&first_name=fn&last_name=ln&password=pw&state=s&street_address=sa&zip_code=12345
     body:
       encoding: UTF-8
       string: ''
@@ -23,19 +23,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 08 Oct 2021 22:33:57 GMT
+      - Tue, 09 Nov 2021 19:17:39 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3195a923307bf6747c75e393c0317c75"
+      - W/"94537f901624e6eed6fc2a182931de26"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bc840d01-057b-4f5b-b7e3-962600ec2699
+      - 92918a98-62b0-4d4e-9265-72168783cdf6
       X-Runtime:
-      - '0.259198'
+      - '0.254198'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -44,6 +44,48 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"user","attributes":{"first_name":"fn","last_name":"ln","email":"kemail5@email.email","street_address":"sa","city":"c","state":"s","zip_code":"12345"}}}'
-  recorded_at: Fri, 08 Oct 2021 22:33:57 GMT
+      string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.xv92wcKLxGGtFwSQt_WLKoACBEwK615hKsaxj2STm8M","type":"user"}}'
+  recorded_at: Tue, 09 Nov 2021 19:17:40 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 09 Nov 2021 19:17:40 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 010f41a5-eb0f-48a1-a951-8f4867859662
+      X-Runtime:
+      - '0.001413'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Unauthorized"}'
+  recorded_at: Tue, 09 Nov 2021 19:17:40 GMT
 recorded_with: VCR 6.0.0
