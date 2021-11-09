@@ -10,42 +10,46 @@
 
 <div class="row">
   <div class="column">
-    <h1>Favorite Stations:</h1>
-    <% if @nearest_stations.empty? %>
-      <h3>You do not have any favorite stations yet.</h3>
-    <% else %>  
-      <% @favorite_stations.each_with_index do |station, index| %>
-      <div id="station-<%= index %>"> 
-        <h3><%= station.name %></h3>
-        <p><%= station.street_address %></p>
-        <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
-        <p>Status: <%= station.status %></p>
-        <p>Hours: <%= station.hours %></p>
-        <p>Network: <%= station.ev_network %></p>
-        <br>
-      </div>
+    <section class="favorite-stations">
+      <h1>Favorite Stations:</h1>
+      <% if @nearest_stations.empty? %>
+        <h3>You do not have any favorite stations yet.</h3>
+      <% else %>  
+        <% @favorite_stations.each_with_index do |station, index| %>
+        <div id="favorite-station-<%= index %>"> 
+          <h3><%= station.name %></h3>
+          <p><%= station.street_address %></p>
+          <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
+          <p>Status: <%= station.status %></p>
+          <p>Hours: <%= station.hours %></p>
+          <p>Network: <%= station.ev_network %></p>
+          <br>
+        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </section>
   </div>
   <div class="column">
-    <h1>Nearest Stations:</h1>
-    <% if @nearest_stations.empty? %>
-      <h3>No stations were found near <%= @user_address  %></h3>
-    <% else %>  
-      <h3>Here are the <%= @nearest_stations.count%> stations closest to <%= @user_address  %></h3>
-      <% @nearest_stations.each_with_index do |station, index| %>
-        <div id="station-<%= index %>"> 
-        <h3><%= station.name %></h3>
-        <p><%= station.street_address %></p>
-        <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
-        <p>Status: <%= station.status %></p>
-        <p>Hours: <%= station.hours %></p>
-        <p>Network: <%= station.ev_network %></p>
-        <p>Distance from Search location: <%= station.distance %> miles</p>
-        <br>
-        </div>
+    <section class="nearest-stations">
+      <h1>Nearest Stations:</h1>
+      <% if @nearest_stations.empty? %>
+        <h3>No stations were found near <%= @user_address  %></h3>
+      <% else %>  
+        <h3>Here are the <%= @nearest_stations.count%> stations closest to <%= @user_address  %></h3>
+        <% @nearest_stations.each_with_index do |station, index| %>
+          <div id="nearest-station-<%= index %>"> 
+            <h3><%= station.name %></h3>
+            <p><%= station.street_address %></p>
+            <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
+            <p>Status: <%= station.status %></p>
+            <p>Hours: <%= station.hours %></p>
+            <p>Network: <%= station.ev_network %></p>
+            <p>Distance from Search location: <%= station.distance %> miles</p>
+            <br>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </section>
   </div>
 </div>
 
