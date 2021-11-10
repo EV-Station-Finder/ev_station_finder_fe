@@ -92,8 +92,18 @@ RSpec.describe "Dashboard Page" do
           expect(page).to have_content("You do not have any favorite stations yet.")
         end
       end
-      it "Add sad path"
-# Account for unsuccessful nearest stations call>>@nearest_stations[:errors]
+
+      it "user address does not have nearest stations", :vcr do
+        visit root_path
+        fill_in :email, with: "musky@example.com"
+        fill_in :password, with: "password"
+        click_button 'Log In'
+
+        within(".nearest-stations") do
+          expect(page).to have_content("Nearest Stations")
+          expect(page).to have_content("No stations were found near 1712 Av Circunvalacion Cochabamba, Bolivia 11111")
+        end
+      end
     end
   end
 end
