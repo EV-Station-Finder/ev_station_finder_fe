@@ -84,6 +84,7 @@ RSpec.describe "Dashboard Page" do
         click_link("Log Out")
         expect(current_path).to eq(root_path)
         expect(page).to_not have_link("Log Out")
+        expect(page).to have_content("You have been successfully logged out")
       end
     end
 
