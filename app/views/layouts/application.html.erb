@@ -7,7 +7,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <h3><%= link_to "Log Out", log_out_path, method: :delete %></h3>
+    <% if session[:token] && params[:controller] != "welcome" %>
+      <h3><%= link_to "Log Out", log_out_path, method: :delete %></h3>
+    <% end %>  
   </head>
   <div class="errors">
     <% flash.each do |type, msg| %>
