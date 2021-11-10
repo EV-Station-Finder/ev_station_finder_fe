@@ -14,12 +14,12 @@ RSpec.describe 'Log In Page' do
         expect(page).to have_content('Welcome wizard@hogwarts.com')
       end
 
-      xit 'And they log in, they can successfully log out', :vcr  do
+      it 'And they log in, they can successfully log out', :vcr  do
         fill_in :email, with: "wizard@hogwarts.com"
         fill_in :password, with: "verysecurepassword"
         click_button 'Log In'
         expect(current_path).to eq(dashboard_path)
-        click_link 'Log out'
+        click_link 'Log Out'
         expect(current_path).to eq(root_path)
         expect(page).to_not have_link('Log Out')
       end
