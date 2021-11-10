@@ -21,16 +21,16 @@ RSpec.describe "As a guest user" do
             ],
             "hourly_weather": [
                 {
-                    "time": "22:33",
-                    "temperature": 75.44,
-                    "conditions": "light rain",
-                    "icon": "10d"
+                    "time": "15:47",
+                    "temperature": 68,
+                    "conditions": "broken clouds",
+                    "icon": "04d"
                 },
                 {
                     "time": "21:00",
-                    "temperature": 69.44,
-                    "conditions": "clear sky",
-                    "icon": "01d"
+                    "temperature": 75,
+                    "conditions": "broken clouds",
+                    "icon": "n15"
                 },
                 {
                     "time": "22:00",

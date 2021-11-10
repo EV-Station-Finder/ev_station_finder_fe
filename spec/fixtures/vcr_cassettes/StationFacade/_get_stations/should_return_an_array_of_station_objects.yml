@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 22:04:45 GMT
+      - Sat, 02 Oct 2021 15:47:36 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 107ba599-b557-46da-b698-9aae3f822cd7
+      - 03527030-1e40-47cd-ba99-dd85bb21eeeb
       X-Runtime:
-      - '0.803912'
+      - '0.447865'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -71,5 +71,5 @@ http_interactions:
         America","street_address":"1985 Sheridan Blvd.","city":"Edgewater","state":"CO","zip_code":"80214"}},{"id":null,"type":"stations","attributes":{"name":"Monaco
         Square","distance":4.69307,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
         Network","street_address":"942 S Monaco Pkwy","city":"Denver","state":"CO","zip_code":"80224"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:04:46 GMT
+  recorded_at: Sat, 02 Oct 2021 15:47:37 GMT
 recorded_with: VCR 6.0.0

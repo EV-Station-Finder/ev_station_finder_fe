@@ -1,0 +1,27 @@
+<h1>Welcome to EV Station Finder</h1>
+<p>Search for nearby EV charging stations and get pertinent
+   information about them such as a 10 hour forecast and
+   driving directions from your set location. Register for an
+   account to save your favorite stations</p>
+
+<strong>Quick Search: Enter the zip, city or address to search up to 20 stations.</strong>
+<%= form_with url: stations_path, local: true, method: :get do |f| %>
+  <%= f.text_field :location, placeholder: "Enter Location" %>
+  <br>
+  <%= f.submit "Find Stations" %>
+<% end %>
+
+<br>
+
+<strong>Log In:</strong>
+<%= form_with url: log_in_path, local: true, method: :post do |f|%>
+  <%= f.label :email, "Email: " %>
+  <%= f.text_field :email, required: true %>
+  <br>
+  <%= f.label :password, "Password: " %>
+  <%= f.password_field :password, required: true %>
+  <br>
+  <%= f.submit "Log In" %>
+<% end %>
+
+<p>Don't have an account? <%= link_to "Sign Up", sign_up_path %></p>
