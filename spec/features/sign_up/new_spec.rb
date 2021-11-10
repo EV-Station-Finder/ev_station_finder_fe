@@ -9,7 +9,7 @@ RSpec.describe 'Sign Up Page' do
         expect(current_path).to eq(sign_up_path)
         fill_in :first_name, with: "fn"
         fill_in :last_name, with: "ln"
-        fill_in :email, with: "kemail5@email1.com"
+        fill_in :email, with: "elonmusk@example.com"
         fill_in :street_address, with: "sa"
         fill_in :city, with: "c"
         fill_in :state, with: "s"
@@ -21,7 +21,7 @@ RSpec.describe 'Sign Up Page' do
       end
     end
   end
-  
+
   describe 'SAD PATHS' do
     describe 'When a user visits the sign up page' do
       it "and the user provides an email that's already taken registration page should include", :vcr do
@@ -41,7 +41,7 @@ RSpec.describe 'Sign Up Page' do
         expect(current_path).to eq(sign_up_path)
         expect(page).to have_content("Validation failed: Email has already been taken")
       end
-      
+
       it "and the user does not provide an email", :vcr do
         visit root_path
         click_link 'Sign Up'
@@ -59,7 +59,7 @@ RSpec.describe 'Sign Up Page' do
         expect(find_field(:email)[:required]).to eq("required")
         expect(current_path).to eq(sign_up_path)
       end
-      
+
       it "and the user provides an invalid email", :vcr do
         visit root_path
         click_link 'Sign Up'
@@ -78,7 +78,7 @@ RSpec.describe 'Sign Up Page' do
         expect(page).to have_content("Validation failed: Email is invalid")
       end
     end
-    # TODO 
+    # TODO
     # Test authorization
     # Add check to make sure password and password_confirmation work
   end
