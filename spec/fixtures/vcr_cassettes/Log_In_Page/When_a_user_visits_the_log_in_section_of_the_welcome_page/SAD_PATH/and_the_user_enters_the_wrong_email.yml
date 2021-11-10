@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/sessions?email=wrongemail@example.com&password=verysecurepassword
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 10 Nov 2021 18:58:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3aca28f3-a832-4e70-bebc-8c970275f1a1
+      X-Runtime:
+      - '0.022242'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Invalid parameters"}'
+  recorded_at: Wed, 10 Nov 2021 18:58:54 GMT
+recorded_with: VCR 6.0.0
