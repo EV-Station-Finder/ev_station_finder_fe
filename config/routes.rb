@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :stations, only: [:index, :show]
   get "/sign_up", to: "sign_up#new"
   post "/sign_up", to: "sign_up#create"
-  post "/log_in", to: "log_in#create"
+  post "/log_in", to: "sessions#create"
   resource :dashboard, only: :show
 end

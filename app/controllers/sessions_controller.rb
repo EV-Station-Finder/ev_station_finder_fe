@@ -1,4 +1,4 @@
-class LogInController < ApplicationController
+class SessionsController < ApplicationController
   def create
     user = UserService.log_in_user(user_params)
     if user[:data]
