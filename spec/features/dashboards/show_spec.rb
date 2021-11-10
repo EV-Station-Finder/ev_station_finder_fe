@@ -14,7 +14,7 @@ RSpec.describe "Dashboard Page" do
         expect(page).to have_content("Welcome wizard@hogwarts.com")
       end
 
-      it "displays a search bar to lookup nearest stations" do      
+      it "displays a search bar to lookup nearest stations" do
         expect(page).to have_field("location")
         expect(page).to have_button("Find Stations")
         fill_in :location, with: "Las Vegas, Nevada"
@@ -78,7 +78,9 @@ RSpec.describe "Dashboard Page" do
           expect(page).to have_content("Network: #{@favorite_station[:ev_network]}")
         end
       end
+    end
 
+    describe 'SAD PATH' do
       it "does not display favorite stations if a user does not have any", :vcr do
         visit root_path
         fill_in :email, with: "alliwantforxmas@example.com"
@@ -87,15 +89,11 @@ RSpec.describe "Dashboard Page" do
 
         within(".favorite-stations") do
           expect(page).to have_content("Favorite Stations")
-          expect(page).to have_content("You have not saved any stations to your list")
+          expect(page).to have_content("You do not have any favorite stations yet.")
         end
       end
-    end
-
-    describe 'SAD PATH' do
       it "Add sad path"
 # Account for unsuccessful nearest stations call>>@nearest_stations[:errors]
-# Account for unsuccessful favorite stations call>>@favorite_stations[:errors]
     end
   end
 end
