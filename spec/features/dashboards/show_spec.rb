@@ -78,6 +78,13 @@ RSpec.describe "Dashboard Page" do
           expect(page).to have_content("Network: #{@favorite_station[:ev_network]}")
         end
       end
+      
+      it "displays the log out link" do
+        expect(page).to have_link("Log Out")
+        click_link("Log Out")
+        expect(current_path).to eq(root_path)
+        expect(page).to_not have_link("Log Out")
+      end
     end
 
     describe 'SAD PATH' do
