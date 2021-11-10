@@ -9,7 +9,7 @@ RSpec.describe 'Sign Up Page' do
         expect(current_path).to eq(sign_up_path)
         fill_in :first_name, with: "fn"
         fill_in :last_name, with: "ln"
-        fill_in :email, with: "kemail5@email.email"
+        fill_in :email, with: "kemail5@email1.com"
         fill_in :street_address, with: "sa"
         fill_in :city, with: "c"
         fill_in :state, with: "s"
@@ -17,7 +17,7 @@ RSpec.describe 'Sign Up Page' do
         fill_in :password, with: "pw"
         fill_in :password_confirmation, with: "pw"
         click_button "Sign Up"
-        expect(current_path).to eq(dashboard_path(10))
+        expect(current_path).to eq(dashboard_path)
       end
     end
   end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "As a registered user" do
-  describe "I log in then I am redirected to my dashboard page" do
+RSpec.describe "Dashboard Page" do
+  describe "As a registered user, I log in then I am redirected to my dashboard page" do
     describe 'HAPPY PATH' do
       before :each do
         visit root_path
@@ -24,20 +24,20 @@ RSpec.describe "As a registered user" do
 
       it "displays the three nearest stations to my saved address" do
         @station1 =  {
-                        "name": "Ideal Market Capitol Hill",
-                        "distance": 0.59729,
+                        "name": "G&M OIL CHEVRON #111",
+                        "distance": 1.14178,
                         "status": "Available",
-                        "hours": "24 hours daily",
-                        "ev_network": "eVgo Network",
-                        "street_address": "900 E 11th Ave",
-                        "city": "Denver",
-                        "state": "CO",
-                        "zip_code": "80218"
+                        "hours": "Mon 12:00am - 12:00am; Tue 12:00am - 12:00am; Wed 12:00am - 12:00am; Thu 12:00am - 12:00am; Fri 12:00am - 12:00am; Sat 12:00am - 12:00am; Sun 12:00am - 12:00am",
+                        "ev_network": "ChargePoint Network",
+                        "street_address": "3600 South La Brea Ave",
+                        "city": "Los Angeles",
+                        "state": "CA",
+                        "zip_code": "90016"
                       }
-
-        expect(page).to have_content("Here are the 3 stations nearest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
-
-        within("#station-0") do
+        within(".nearest-stations") do
+          expect(page).to have_content("Here are the 14 stations nearest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
+        end
+        within("#nearest-station-0") do
           expect(page).to have_content(@station1[:name])
           expect(page).to have_content(@station1[:street_address])
           expect(page).to have_content(@station1[:city])

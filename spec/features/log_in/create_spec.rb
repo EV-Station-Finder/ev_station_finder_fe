@@ -6,19 +6,19 @@ RSpec.describe 'Log In Page' do
     describe 'HAPPY PATH' do
       it 'Log in section should successfully redirect to their dashboard', :vcr do
         visit root_path 
-        fill_in :email, with: "whatever55@example.com"
-        fill_in :password, with: "password"
+        fill_in :email, with: "wizard@hogwarts.com"
+        fill_in :password, with: "verysecurepassword"
         click_button 'Log In'
-        expect(current_path).to eq(dashboard_path(1))
-        expect(page).to have_content('Hello whatever55@example.com') # TODO: bring back when dashboard controller is completed
-      end 
+        expect(current_path).to eq(dashboard_path)
+        expect(page).to have_content('Welcome wizard@hogwarts.com') 
+      end
       
       xit 'And they log in, they can successfully log out', :vcr  do
         visit root_path 
-        fill_in :email, with: "whatever55@example.com"
-        fill_in :password, with: "password"
+        fill_in :email, with: "wizard@hogwarts.com"
+        fill_in :password, with: "verysecurepassword"
         click_link 'Log In'
-        expect(current_path).to eq(dashboard_path(1))
+        expect(current_path).to eq(dashboard_path)
         click_link 'Log out'
         expect(current_path).to eq(root_path)
         expect(page).to_not have_link('Log Out')
@@ -27,7 +27,7 @@ RSpec.describe 'Log In Page' do
   
     describe 'SAD PATH' do
       xit "and the user enters the wrong password", :vcr  do
-        fill_in :email, with: "whatever55@example.com"
+        fill_in :email, with: "wizard@hogwarts.com"
         fill_in :password, with: "wrong_pw"
         click_link 'Log In'
         expect(current_path).to eq(root_path)
@@ -36,7 +36,7 @@ RSpec.describe 'Log In Page' do
       
       xit "and the user enters the wrong email", :vcr  do
         fill_in :email, with: "wrongemail@example.com"
-        fill_in :password, with: "password"
+        fill_in :password, with: "verysecurepassword"
         click_link 'Log In'
         expect(current_path).to eq(root_path)
         expect(page).to have_content("Placeholder error message")
