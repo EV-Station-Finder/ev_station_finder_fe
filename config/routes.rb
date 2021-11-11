@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post "/log_in", to: "sessions#create"
   delete "/log_out", to: "sessions#destroy"
   resource :dashboard, only: :show
+  get '*path' => redirect('/')
 end
