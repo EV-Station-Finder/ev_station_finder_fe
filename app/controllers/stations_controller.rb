@@ -1,4 +1,6 @@
 class StationsController < ApplicationController
+  skip_before_action :authorize, only: %i[index show]
+
   def index
     @stations = StationFacade.get_stations(params[:location])
   end

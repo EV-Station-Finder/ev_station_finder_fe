@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorize, only: %i[create]
+
   def create
     user = UserService.log_in_user(user_params)
     if user[:data]
@@ -9,11 +11,11 @@ class SessionsController < ApplicationController
       redirect_to root_path
     end
   end
-  
+
   def destroy
     session[:token] = nil
     flash[:notice] = "You have been successfully logged out"
-    redirect_to root_path    
+    redirect_to root_path
   end
 
   private

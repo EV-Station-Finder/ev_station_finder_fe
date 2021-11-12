@@ -31,9 +31,16 @@ class UserService
     end
     parse_json(response)
   end
-  
+
   def self.get_favorite_stations(user_token)
     response = conn.get("/api/v1/favorite_stations") do |faraday|
+      faraday.params['token'] = user_token
+    end
+    parse_json(response)
+  end
+
+  def self.authorize_user(user_token)
+    response = conn.get("/api/v1/authorize") do |faraday|
       faraday.params['token'] = user_token
     end
     parse_json(response)
