@@ -9,7 +9,7 @@ RSpec.describe 'Sign Up Page' do
         expect(current_path).to eq(sign_up_path)
         fill_in :first_name, with: "fn"
         fill_in :last_name, with: "ln"
-        fill_in :email, with: "elonmusk@example.com"
+        fill_in :email, with: "elonmusk3@example.com"
         fill_in :street_address, with: "sa"
         fill_in :city, with: "c"
         fill_in :state, with: "s"

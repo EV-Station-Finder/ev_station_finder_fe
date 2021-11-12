@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :authorize, only: %i[create new]
+
   def new
   end
 
