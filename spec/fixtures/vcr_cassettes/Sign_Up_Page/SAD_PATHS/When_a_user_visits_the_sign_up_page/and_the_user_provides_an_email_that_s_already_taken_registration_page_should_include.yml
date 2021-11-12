@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 08 Oct 2021 22:00:29 GMT
+      - Fri, 12 Nov 2021 18:42:51 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 45da6fe7-97bb-4ad1-808c-06ce0956d6d0
+      - d2306902-1c23-4110-9c74-600a35e38a2a
       X-Runtime:
-      - '0.285869'
+      - '0.257095'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -43,5 +43,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":"Validation failed: Email has already been taken"}'
-  recorded_at: Fri, 08 Oct 2021 22:00:30 GMT
+  recorded_at: Fri, 12 Nov 2021 18:42:52 GMT
 recorded_with: VCR 6.0.0

@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 18:54:12 GMT
+      - Fri, 12 Nov 2021 18:33:21 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -33,9 +33,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0d1020e2-903f-4dc9-aabb-7b706a3a10c3
+      - dd6197f9-1554-4466-9a01-16e70867ed9e
       X-Runtime:
-      - '0.296659'
+      - '0.250016'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -45,7 +45,51 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0","type":"user"}}'
-  recorded_at: Tue, 09 Nov 2021 18:54:13 GMT
+  recorded_at: Fri, 12 Nov 2021 18:33:21 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/authorize?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 12 Nov 2021 18:33:21 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"aaad2b1c5bd558588746a0e9fafa3334"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b9891514-b642-40f5-acb4-f5b48136e1c7
+      X-Runtime:
+      - '0.003329'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0","type":"user"}}'
+  recorded_at: Fri, 12 Nov 2021 18:33:22 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0
@@ -67,7 +111,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 18:54:13 GMT
+      - Fri, 12 Nov 2021 18:33:21 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -77,9 +121,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 38ea95b1-8267-4e2f-811b-5926f3b2884a
+      - d045d0aa-39d6-442a-9739-065728f161bc
       X-Runtime:
-      - '0.006937'
+      - '0.003525'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -90,7 +134,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"user","attributes":{"first_name":"Harry","last_name":"Potter","email":"wizard@hogwarts.com","street_address":"3722
         Crenshaw Blvd.","city":"Los Angeles","state":"CA","zip_code":"90016"}}}'
-  recorded_at: Tue, 09 Nov 2021 18:54:13 GMT
+  recorded_at: Fri, 12 Nov 2021 18:33:22 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=3722%20Crenshaw%20Blvd.%20Los%20Angeles,%20CA%2090016
@@ -112,7 +156,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 18:54:13 GMT
+      - Fri, 12 Nov 2021 18:33:21 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -122,9 +166,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 79280ed0-34db-453b-8764-db58ce3d1bab
+      - 49c26c1d-3873-4101-9e32-1dd3fc714d4f
       X-Runtime:
-      - '0.407730'
+      - '0.428113'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -172,7 +216,7 @@ http_interactions:
         Indigo Los Angeles Downtown - Tesla Supercharger","distance":4.49929,"status":"Available","hours":"24
         hours daily; for Tesla use only","ev_network":"Tesla","street_address":"899
         South Francisco Street","city":"Los Angeles","state":"CA","zip_code":"90015","api_id":122275}}]}'
-  recorded_at: Tue, 09 Nov 2021 18:54:14 GMT
+  recorded_at: Fri, 12 Nov 2021 18:33:22 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/favorite_stations?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0
@@ -194,7 +238,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 09 Nov 2021 18:54:14 GMT
+      - Fri, 12 Nov 2021 18:33:22 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -204,9 +248,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 73eaab66-a550-4c2b-813a-ebcc8bb14d57
+      - 54fecb78-de00-46c6-8574-d1c0c52a0727
       X-Runtime:
-      - '0.375385'
+      - '0.471964'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -221,5 +265,5 @@ http_interactions:
         Express","distance":null,"status":"Available","hours":"24 hours daily; Also
         accepts Murphy USA Fleet Card","ev_network":"Non-Networked","street_address":"1358
         Wyoming Blvd NE","city":"Albuquerque","state":"NM","zip_code":"87112","api_id":152070}}]}'
-  recorded_at: Tue, 09 Nov 2021 18:54:15 GMT
+  recorded_at: Fri, 12 Nov 2021 18:33:23 GMT
 recorded_with: VCR 6.0.0
