@@ -31,5 +31,10 @@ RSpec.describe "As a guest user" do
         expect(page).to have_content("Distance from Search location: #{@station1[:distance]} miles")
       end
     end
+
+    it "does not display the logout link", :vcr do
+      visit "/stations?location=denver,co"
+      expect(page).to_not have_link("Log Out")
+    end
   end
 end
