@@ -78,13 +78,18 @@ RSpec.describe "Dashboard Page" do
           expect(page).to have_content("Network: #{@favorite_station[:ev_network]}")
         end
       end
-      
+
       it "displays the log out link" do
         expect(page).to have_link("Log Out")
         click_link("Log Out")
         expect(current_path).to eq(root_path)
         expect(page).to_not have_link("Log Out")
         expect(page).to have_content("You have been successfully logged out")
+      end
+
+      it "redirects to dashboard when user is logged in and tries to visit the home page" do
+        visit root_path
+        expect(current_path).to eq(dashboard_path)
       end
     end
 
