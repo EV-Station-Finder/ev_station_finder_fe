@@ -102,5 +102,10 @@ RSpec.describe "As a guest user" do
         expect(page).to have_content("American Express")
       end
     end
+
+    it "does not display the logout link", :vcr do
+      visit "/stations/152087"
+      expect(page).to_not have_link("Log Out")
+    end
   end
 end

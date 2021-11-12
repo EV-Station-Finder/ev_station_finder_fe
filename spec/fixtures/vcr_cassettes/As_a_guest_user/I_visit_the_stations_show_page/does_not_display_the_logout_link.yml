@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations/152087
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 12 Nov 2021 17:15:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b3f65c4ed7bebd0ad45be2a531f79226"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - de9aee93-3ac1-442b-9bc9-2f53994a9f86
+      X-Runtime:
+      - '0.489829'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
+        General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"2375
+        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
+        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"17:15","temperature":35.92,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"17:00","temperature":35.92,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"18:00","temperature":36.27,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"19:00","temperature":36.54,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"20:00","temperature":37.72,"conditions":"light
+        snow","icon":"13d"},{"time":"21:00","temperature":38.66,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"22:00","temperature":37.56,"conditions":"broken
+        clouds","icon":"04d"},{"time":"23:00","temperature":35.2,"conditions":"broken
+        clouds","icon":"04n"},{"time":"00:00","temperature":35.26,"conditions":"broken
+        clouds","icon":"04n"},{"time":"01:00","temperature":35.1,"conditions":"overcast
+        clouds","icon":"04n"}]}}}'
+  recorded_at: Fri, 12 Nov 2021 17:15:11 GMT
+recorded_with: VCR 6.0.0

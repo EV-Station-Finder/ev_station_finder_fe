@@ -22,6 +22,11 @@ RSpec.describe 'Welcome page' do
       expect(page).to have_button("Log In")
     end
 
+    it "I am redirected to the rooth path when I type an undefined route" do
+      visit "/non-existent-route"
+      expect(current_path).to eq(root_path)
+    end
+
     describe 'When I fill in the login form' do
       it "I can see an area to enter my login information", :vcr  do
         fill_in :email, with: "wizard@hogwarts.com"
