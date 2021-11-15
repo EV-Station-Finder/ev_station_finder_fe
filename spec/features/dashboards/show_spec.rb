@@ -25,7 +25,7 @@ RSpec.describe "Dashboard Page" do
       it "displays the three nearest stations to my saved address" do
         @station1 =  {
                         "name": "G&M OIL CHEVRON #111",
-                        "distance": 1.14178,
+                        "distance": 1.13745,
                         "status": "Available",
                         "hours": "Mon 12:00am - 12:00am; Tue 12:00am - 12:00am; Wed 12:00am - 12:00am; Thu 12:00am - 12:00am; Fri 12:00am - 12:00am; Sat 12:00am - 12:00am; Sun 12:00am - 12:00am",
                         "ev_network": "ChargePoint Network",
