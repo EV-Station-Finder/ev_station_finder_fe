@@ -1,11 +1,3 @@
-<strong>Quick Search: Enter the zip, city or address to search up to 20 stations.</strong>
-<%= form_with url: stations_path, local: true, method: :get do |f| %>
-  <%= f.text_field :location, placeholder: "Enter Location" %>
-  <br>
-  <%= f.submit "Find Stations" %>
-<% end %>
-
-
 <h1>Welcome <%= @user_info[:email] %></h1>
 
 <div class="row">

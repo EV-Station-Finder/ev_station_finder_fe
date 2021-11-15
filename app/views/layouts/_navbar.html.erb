@@ -1,0 +1,32 @@
+<header>
+  <div class='container'>
+
+      <nav>
+        <ul>
+          <% if session[:token] && params[:controller] != "welcome" %>
+            <li><%= link_to "My Profile (Coming Soon)" %></li>
+            <li><%= link_to "Dashboard", dashboard_path, method: :get %></li>
+            <li><%= link_to "Log Out", log_out_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Log In", root_path, method: :get %></li>
+          <% end %>
+        
+        <li><%= form_with url: stations_path, local: true, method: :get do |f| %>
+          <%= f.text_field :location, placeholder: "Search station by zip, city or address", size: "31x400" %>
+          <%= f.submit "Find Stations" %>
+        <% end %>
+        </li>
+      </ul>
+          
+      </nav>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
