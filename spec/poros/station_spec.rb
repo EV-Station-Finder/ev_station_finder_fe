@@ -4,15 +4,16 @@ RSpec.describe Station do
   describe "Station Object" do
     before:each do
       @incoming_hash = {
-                          "name": "Ideal Market Capitol Hill",
-                          "distance": 0.59729,
-                          "status": "Available",
-                          "hours": "24 hours daily",
-                          "ev_network": "eVgo Network",
-                          "street_address": "900 E 11th Ave",
-                          "city": "Denver",
-                          "state": "CO",
-                          "zip_code": "80218"
+                        "api_id": 454,
+                        "name": "Ideal Market Capitol Hill",
+                        "distance": 0.59729,
+                        "status": "Available",
+                        "hours": "24 hours daily",
+                        "ev_network": "eVgo Network",
+                        "street_address": "900 E 11th Ave",
+                        "city": "Denver",
+                        "state": "CO",
+                        "zip_code": "80218"
                        }
     end
 
@@ -20,6 +21,7 @@ RSpec.describe Station do
       new_station = Station.new(@incoming_hash)
 
       expect(new_station).to be_a Station
+      expect(new_station.api_id).to eq(454)
       expect(new_station.name).to eq("Ideal Market Capitol Hill")
       expect(new_station.distance).to eq(0.59729)
       expect(new_station.status).to eq("Available")

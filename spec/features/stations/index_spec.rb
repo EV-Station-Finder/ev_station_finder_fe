@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "As a guest user" do
-  describe "I visit the stations index page" do
+RSpec.describe "Station Index" do
+  describe "As as guest user, I visit the stations index page" do
     it "displays each station with corresponding attributes", :vcr do
       @station1 =  {
+                      "api_id": 198643,
                       "name": "Ideal Market Capitol Hill",
                       "distance": 0.59729,
                       "status": "Available",

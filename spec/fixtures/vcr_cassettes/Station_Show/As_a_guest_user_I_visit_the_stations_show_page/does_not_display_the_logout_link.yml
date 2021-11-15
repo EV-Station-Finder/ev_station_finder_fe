@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 17:15:11 GMT
+      - Mon, 15 Nov 2021 21:14:01 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b3f65c4ed7bebd0ad45be2a531f79226"
+      - W/"3f02724268aa871188bc5e1060f08ee8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - de9aee93-3ac1-442b-9bc9-2f53994a9f86
+      - 1c697ffb-15d1-4ac1-ab34-511b7dc7ac40
       X-Runtime:
-      - '0.489829'
+      - '0.496198'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -45,16 +45,16 @@ http_interactions:
       string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
         General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"2375
         St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
-        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"17:15","temperature":35.92,"conditions":"overcast
-        clouds","icon":"04d"},{"time":"17:00","temperature":35.92,"conditions":"overcast
-        clouds","icon":"04d"},{"time":"18:00","temperature":36.27,"conditions":"overcast
-        clouds","icon":"04d"},{"time":"19:00","temperature":36.54,"conditions":"overcast
-        clouds","icon":"04d"},{"time":"20:00","temperature":37.72,"conditions":"light
-        snow","icon":"13d"},{"time":"21:00","temperature":38.66,"conditions":"overcast
-        clouds","icon":"04d"},{"time":"22:00","temperature":37.56,"conditions":"broken
-        clouds","icon":"04d"},{"time":"23:00","temperature":35.2,"conditions":"broken
-        clouds","icon":"04n"},{"time":"00:00","temperature":35.26,"conditions":"broken
-        clouds","icon":"04n"},{"time":"01:00","temperature":35.1,"conditions":"overcast
+        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"21:14","temperature":32.41,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"21:00","temperature":32.41,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"22:00","temperature":31.71,"conditions":"broken
+        clouds","icon":"04d"},{"time":"23:00","temperature":29.59,"conditions":"broken
+        clouds","icon":"04n"},{"time":"00:00","temperature":27.21,"conditions":"broken
+        clouds","icon":"04n"},{"time":"01:00","temperature":24.67,"conditions":"scattered
+        clouds","icon":"03n"},{"time":"02:00","temperature":23.11,"conditions":"broken
+        clouds","icon":"04n"},{"time":"03:00","temperature":22.68,"conditions":"broken
+        clouds","icon":"04n"},{"time":"04:00","temperature":23.36,"conditions":"broken
+        clouds","icon":"04n"},{"time":"05:00","temperature":23.52,"conditions":"broken
         clouds","icon":"04n"}]}}}'
-  recorded_at: Fri, 12 Nov 2021 17:15:11 GMT
+  recorded_at: Mon, 15 Nov 2021 21:14:01 GMT
 recorded_with: VCR 6.0.0
