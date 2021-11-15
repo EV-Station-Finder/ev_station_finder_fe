@@ -4,13 +4,6 @@
    driving directions from your set location. Register for an
    account to save your favorite stations</p>
 
-<strong>Quick Search: Enter the zip, city or address to search up to 20 stations.</strong>
-<%= form_with url: stations_path, local: true, method: :get do |f| %>
-  <%= f.text_field :location, placeholder: "Enter Location" %>
-  <br>
-  <%= f.submit "Find Stations" %>
-<% end %>
-
 <br>
 
 <strong>Log In:</strong>
