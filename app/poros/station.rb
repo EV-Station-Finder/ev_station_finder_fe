@@ -11,7 +11,7 @@ class Station
               :zip_code
 
   def initialize(station_data)
-    @api_id           = station_data[:api_id]
+    @api_id         = station_data[:api_id]
     @name           = station_data[:name]
     @distance       = station_data[:distance]
     @status         = station_data[:status]
