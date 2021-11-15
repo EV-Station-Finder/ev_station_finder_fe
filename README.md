@@ -1,5 +1,5 @@
 # EV Station Finder - Frontend
-EV Station Finder allows users to find the nearest charging station for their electric vehicle. And to help them prepare, users will also see a 10-hour forecast in the station’s page. 
+[EV Station Finder](https://ev-station-finder-frontend.herokuapp.com/) allows users to find the nearest charging station for their electric vehicle. And to help them prepare, users will also see a 10-hour forecast in the station’s page. 
 The guest user is able to utilize EV Station Finder with ease. A guest user can provide a location in the following ways:
 
   - zip code
