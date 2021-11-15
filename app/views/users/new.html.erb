@@ -1,7 +1,4 @@
-<% if flash[:errors] %>
-      <h2><%= flash[:errors] %></h2>
-  <% end %>
-  
+
 <%= form_with url: "/sign_up", local: true, method: :post do |f|%>
   <%= f.label :first_name, "First Name: " %>
   <%= f.text_field :first_name %>
