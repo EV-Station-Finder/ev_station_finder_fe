@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 17:15:36 GMT
+      - Mon, 15 Nov 2021 21:13:58 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5659b328-c28d-4525-bb3a-080d2f5119ab
+      - 1312a0d1-9eb3-478e-ab2d-7703ec8ed082
       X-Runtime:
-      - '0.426893'
+      - '0.446159'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -74,5 +74,5 @@ http_interactions:
         Avenue and Monaco Parkway","city":"Denver","state":"CO","zip_code":"80220","api_id":197425}},{"id":null,"type":"station","attributes":{"name":"Monaco
         Square","distance":4.69307,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
         Network","street_address":"942 S Monaco Pkwy","city":"Denver","state":"CO","zip_code":"80224","api_id":198931}}]}'
-  recorded_at: Fri, 12 Nov 2021 17:15:37 GMT
+  recorded_at: Mon, 15 Nov 2021 21:13:59 GMT
 recorded_with: VCR 6.0.0
