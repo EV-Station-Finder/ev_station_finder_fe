@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "As a guest user" do
-  describe "I visit the stations show page" do
+RSpec.describe "Station Show" do
+  describe "As a guest user, I visit the stations show page" do
     it "displays a single station attributes", :vcr do
       @station1 =  {
             "name": "Casey's General Store",
@@ -21,9 +21,9 @@ RSpec.describe "As a guest user" do
             ],
             "hourly_weather": [
                 {
-                    "time": "15:47",
-                    "temperature": 68,
-                    "conditions": "broken clouds",
+                    "time": "21:14",
+                    "temperature": 32,
+                    "conditions": "overcast clouds",
                     "icon": "04d"
                 },
                 {
