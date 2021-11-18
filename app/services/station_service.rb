@@ -3,12 +3,19 @@ class StationService
     response = conn.get("/api/v1/stations") do |faraday|
       faraday.params['location'] = location
     end
-    # response = Faraday.get("http://localhost:3000/api/v1/stations?location=#{location}")
     parse_json(response)
   end
 
   def self.get_station(api_id)
     response = conn.get("/api/v1/stations/#{api_id}")
+    parse_json(response)
+  end
+  
+  def self.add_favorite_station(api_id, token)
+    response = conn.get("/api/v1/favorite_stations") do |faraday|
+      faraday.params['token'] = token
+      faraday.params['api_id'] = api_id
+    end
     parse_json(response)
   end
 
