@@ -10,4 +10,8 @@ class StationFacade
     station = StationService.get_station(api_id)
     StationDetails.new(station[:data][:attributes])
   end
+  
+  def self.add_favorite_station(api_id, token)
+    StationService.add_favorite_station(api_id, token)
+  end
 end
