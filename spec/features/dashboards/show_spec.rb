@@ -10,11 +10,11 @@ RSpec.describe "Dashboard Page" do
         click_button 'Log In'
       end
 
-      it "displays a welcome message using my email" do
+      it "displays a welcome message using my email", :vcr do
         expect(page).to have_content("Welcome wizard@hogwarts.com")
       end
 
-      it "displays a search bar to lookup nearest stations" do
+      it "displays a search bar to lookup nearest stations", :vcr do
         expect(page).to have_field("location")
         expect(page).to have_button("Find Stations")
         fill_in :location, with: "Las Vegas, Nevada"
@@ -22,7 +22,7 @@ RSpec.describe "Dashboard Page" do
         expect(current_path).to eq(stations_path)
       end
 
-      it "displays the three nearest stations to my saved address" do
+      it "displays the three nearest stations to my saved address", :vcr do
         @station1 =  {
                         "name": "G&M OIL CHEVRON #111",
                         "distance": 1.13745,
@@ -37,6 +37,7 @@ RSpec.describe "Dashboard Page" do
         within(".nearest-stations") do
           expect(page).to have_content("Here are the 14 stations nearest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
         end
+        
         within("#nearest-station-0") do
           expect(page).to have_content(@station1[:name])
           expect(page).to have_content(@station1[:street_address])
@@ -50,7 +51,7 @@ RSpec.describe "Dashboard Page" do
         end
       end
 
-      it "displays my favorite stations" do
+      it "displays my favorite stations", :vcr do
         @favorite_station =  {
                                 "name": "Casey's General Store",
                                 "distance": nil,
