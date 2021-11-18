@@ -79,7 +79,7 @@ RSpec.describe "Dashboard Page" do
         end
       end
 
-      it "displays the log out link" do
+      it "displays the log out link", :vcr do
         expect(page).to have_link("Log Out")
         click_link("Log Out")
         expect(current_path).to eq(root_path)
@@ -87,7 +87,7 @@ RSpec.describe "Dashboard Page" do
         expect(page).to have_content("You have been successfully logged out")
       end
 
-      it "redirects to dashboard when user is logged in and tries to visit the home page" do
+      it "redirects to dashboard when user is logged in and tries to visit the home page", :vcr do
         visit root_path
         expect(current_path).to eq(dashboard_path)
       end
