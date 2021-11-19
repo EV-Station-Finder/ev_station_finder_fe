@@ -81,12 +81,12 @@ RSpec.describe "Station Show" do
         }
       ]
     } }
-    
+
     let(:station2) { {
       "name": "G&M OIL CHEVRON #111",
       "api_id": 182990
       } }
-      
+
     describe "As a guest user, I visit the stations show page" do
       it "displays a single station attributes", :vcr do
         visit station_path(station1[:api_id])
@@ -114,9 +114,9 @@ RSpec.describe "Station Show" do
         expect(page).to_not have_link("Log Out")
         expect(page).to have_link("Log In")
       end
-      
+
       it "does not display favorite station link"
-      
+
     end
     describe "As a logged in user, I visit the stations show page" do
       before :each do
@@ -126,30 +126,30 @@ RSpec.describe "Station Show" do
         click_button 'Log In'
         click_link "G&M OIL CHEVRON #111"
       end
-      
+
       it "display link to favorite a station", :vcr do
         expect(current_path).to eq(station_path(station2[:api_id]))
         click_link("Favorite Station")
         expect(current_path).to eq(station_path(station2[:api_id]))
         expect(page).to have_content("#{station2[:name]} has been added to your favorite stations")
-        
+
         visit dashboard_path
-        
-        within("#favorite-station-2") do
+
+        within("#favorite-station-3") do
           expect(page).to have_content(station2[:name])
         end
         # TODO: Remove staiton 2 from favorites once point has been created
         # click_link("Unfavorite Station")
       end
-      
+
       xit "display link to unfavorite a station", :vcr do
         click_link("Unfavorite Station")
         expect(current_path).to eq(station_path(station1[:api_id]))
         expect(page).to have_content("#{station1[:name]} has been added to your favorite stations")
         click_link("Favorite Station")
       end
-      
-      
+
+
       it "displays the logout link", :vcr do
         expect(page).to have_link("Log Out")
         expect(page).to_not have_link("Log In")
