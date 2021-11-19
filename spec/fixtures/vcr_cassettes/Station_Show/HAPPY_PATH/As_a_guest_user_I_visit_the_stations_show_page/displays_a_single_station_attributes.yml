@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations/152087
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 18 Nov 2021 20:49:27 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f185b1a27d5c9e49989529ae58b1148a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2b2c1e0a-dcc0-4ec8-acc5-e2e55b7af8cd
+      X-Runtime:
+      - '0.501601'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
+        General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"2375
+        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
+        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"20:49","temperature":30.54,"conditions":"light
+        snow","icon":"13d"},{"time":"20:00","temperature":30.78,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"21:00","temperature":30.54,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"22:00","temperature":30.54,"conditions":"overcast
+        clouds","icon":"04d"},{"time":"23:00","temperature":30.13,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"00:00","temperature":29.3,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"01:00","temperature":28.17,"conditions":"scattered
+        clouds","icon":"03n"},{"time":"02:00","temperature":26.62,"conditions":"few
+        clouds","icon":"02n"},{"time":"03:00","temperature":25.83,"conditions":"few
+        clouds","icon":"02n"},{"time":"04:00","temperature":24.98,"conditions":"clear
+        sky","icon":"01n"}]}}}'
+  recorded_at: Thu, 18 Nov 2021 20:49:27 GMT
+recorded_with: VCR 6.0.0

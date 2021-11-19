@@ -6,7 +6,7 @@ RSpec.describe 'Welcome page' do
   end
 
   describe 'When I visit the welcome page' do
-    it "I see a welcome message and a description of the application"  do
+    it "I see a welcome message and a description of the application", :vcr  do
       welcome_message = "Welcome to EV Station Finder"
       description = "Search for nearby EV charging stations and get pertinent information about them such as a 10 hour forecast and driving directions from your set location. Register for an account to save your favorite stations"
 
@@ -14,15 +14,15 @@ RSpec.describe 'Welcome page' do
       expect(page).to have_content(description)
     end
 
-    it "I can see the registration button for new users"  do
+    it "I can see the registration button for new users", :vcr  do
       expect(page).to have_link("Sign Up")
     end
 
-    it "I can see the login button for registered users"  do
+    it "I can see the login button for registered users", :vcr  do
       expect(page).to have_button("Log In")
     end
 
-    it "I am redirected to the rooth path when I type an undefined route" do
+    it "I am redirected to the rooth path when I type an undefined route", :vcr do
       visit "/non-existent-route"
       expect(current_path).to eq(root_path)
     end
