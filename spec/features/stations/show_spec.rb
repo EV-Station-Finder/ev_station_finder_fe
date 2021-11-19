@@ -117,6 +117,14 @@ RSpec.describe "Station Show" do
 
       it "does not display favorite station link"
       # TODO: decide if this will lead to registration page, if we want it to display an alternative link, or not display anything
+
+      it "redirects guest to welcome page if favorite station link is clicked", :vcr do
+        visit station_path(station1[:api_id])
+        expect(current_path).to eq(station_path(station1[:api_id]))
+        click_link("Favorite Station")
+        expect(current_path).to eq(root_path)
+        expect(page).to have_content("Please Log In")
+      end
     end
 
     describe "As a logged in user, I visit the stations show page" do
@@ -161,7 +169,7 @@ RSpec.describe "Station Show" do
   describe "SAD PATH" do
     describe "As a logged in user, I visit the stations show page" do
       it "displays a message if same user attempts to favorite an already favorited station"
-      
+
     end
   end
 end

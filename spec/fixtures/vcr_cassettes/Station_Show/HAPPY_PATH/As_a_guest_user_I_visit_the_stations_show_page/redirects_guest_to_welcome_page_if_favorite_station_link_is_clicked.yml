@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations/152087
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 19 Nov 2021 19:29:12 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2b1bb0449c0325513567c51d70ea02a5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ff9da55a-45fc-455a-8d5c-b6f4ead9e5cb
+      X-Runtime:
+      - '0.480397'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
+        General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"2375
+        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
+        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"19:29","temperature":35.02,"conditions":"clear
+        sky","icon":"01d"},{"time":"19:00","temperature":35.02,"conditions":"clear
+        sky","icon":"01d"},{"time":"20:00","temperature":35.24,"conditions":"few clouds","icon":"02d"},{"time":"21:00","temperature":35.38,"conditions":"scattered
+        clouds","icon":"03d"},{"time":"22:00","temperature":34.95,"conditions":"broken
+        clouds","icon":"04d"},{"time":"23:00","temperature":33.91,"conditions":"broken
+        clouds","icon":"04n"},{"time":"00:00","temperature":32.32,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"01:00","temperature":31.82,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"02:00","temperature":32.07,"conditions":"overcast
+        clouds","icon":"04n"},{"time":"03:00","temperature":32.38,"conditions":"overcast
+        clouds","icon":"04n"}]}}}'
+  recorded_at: Fri, 19 Nov 2021 19:29:13 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/authorize?token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 19 Nov 2021 19:29:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - aca957da-6810-429e-bb06-d838efdc3d69
+      X-Runtime:
+      - '0.001455'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Unauthorized"}'
+  recorded_at: Fri, 19 Nov 2021 19:29:13 GMT
+recorded_with: VCR 6.0.0
