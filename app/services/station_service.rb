@@ -10,9 +10,9 @@ class StationService
     response = conn.get("/api/v1/stations/#{api_id}")
     parse_json(response)
   end
-  
+
   def self.add_favorite_station(api_id, token)
-    response = conn.get("/api/v1/favorite_stations") do |faraday|
+    response = conn.post("/api/v1/favorite_stations") do |faraday|
       faraday.params['token'] = token
       faraday.params['api_id'] = api_id
     end
