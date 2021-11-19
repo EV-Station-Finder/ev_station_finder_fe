@@ -116,8 +116,9 @@ RSpec.describe "Station Show" do
       end
 
       it "does not display favorite station link"
-
+      # TODO: decide if this will lead to registration page, if we want it to display an alternative link, or not display anything
     end
+
     describe "As a logged in user, I visit the stations show page" do
       before :each do
         visit root_path
@@ -138,11 +139,11 @@ RSpec.describe "Station Show" do
         within("#favorite-station-3") do
           expect(page).to have_content(station2[:name])
         end
-        # TODO: Remove staiton 2 from favorites once point has been created
+        # TODO: Remove station 2 from favorites once point has been created
         # click_link("Unfavorite Station")
       end
 
-      xit "display link to unfavorite a station", :vcr do
+      xit "displays link to unfavorite a station", :vcr do
         click_link("Unfavorite Station")
         expect(current_path).to eq(station_path(station1[:api_id]))
         expect(page).to have_content("#{station1[:name]} has been added to your favorite stations")
@@ -154,6 +155,13 @@ RSpec.describe "Station Show" do
         expect(page).to have_link("Log Out")
         expect(page).to_not have_link("Log In")
       end
+    end
+  end
+
+  describe "SAD PATH" do
+    describe "As a logged in user, I visit the stations show page" do
+      it "displays a message if same user attempts to favorite an already favorited station"
+      
     end
   end
 end
