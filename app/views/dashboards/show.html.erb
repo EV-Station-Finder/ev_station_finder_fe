@@ -8,15 +8,17 @@
         <h3>You do not have any favorite stations yet.</h3>
       <% else %>
         <% @favorite_stations.each_with_index do |station, index| %>
-        <div id="favorite-station-<%= index %>">
-          <h3><%= link_to "#{station.name}", station_path(station.api_id), method: :get %></h3>
-          <p><%= station.street_address %></p>
-          <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
-          <p>Status: <%= station.status %></p>
-          <p>Hours: <%= station.hours %></p>
-          <p>Network: <%= station.ev_network %></p>
-          <br>
-        </div>
+        <% cache station.api_id do %>
+          <div id="favorite-station-<%= index %>">
+            <h3><%= link_to "#{station.name}", station_path(station.api_id), method: :get %></h3>
+            <p><%= station.street_address %></p>
+            <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
+            <p>Status: <%= station.status %></p>
+            <p>Hours: <%= station.hours %></p>
+            <p>Network: <%= station.ev_network %></p>
+            <br>
+          </div>
+          <% end %>
         <% end %>
       <% end %>
     </section>
@@ -27,18 +29,20 @@
       <% if @nearest_stations.empty? %>
         <h3>No stations were found near <%= @user_address  %></h3>
       <% else %>
-        <h3>Here are the <%= @nearest_stations.count%> stations nearest to <%= @user_address  %></h3>
-        <% @nearest_stations.each_with_index do |station, index| %>
-          <div id="nearest-station-<%= index %>">
-            <h3><%= link_to "#{station.name}", station_path(station.api_id), method: :get %></h3>
-            <p><%= station.street_address %></p>
-            <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
-            <p>Status: <%= station.status %></p>
-            <p>Hours: <%= station.hours %></p>
-            <p>Network: <%= station.ev_network %></p>
-            <p>Distance from Search location: <%= station.distance %> miles</p>
-            <br>
-          </div>
+          <h3>Here are the <%= @nearest_stations.count%> stations nearest to <%= @user_address  %></h3>
+          <% @nearest_stations.each_with_index do |station, index| %>
+          <% cache station.api_id do %>
+            <div id="nearest-station-<%= index %>">
+              <h3><%= link_to "#{station.name}", station_path(station.api_id), method: :get %></h3>
+              <p><%= station.street_address %></p>
+              <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
+              <p>Status: <%= station.status %></p>
+              <p>Hours: <%= station.hours %></p>
+              <p>Network: <%= station.ev_network %></p>
+              <p>Distance from Search location: <%= station.distance %> miles</p>
+              <br>
+            </div>
+          <% end %>
         <% end %>
       <% end %>
     </section>
