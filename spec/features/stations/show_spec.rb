@@ -8,6 +8,7 @@ RSpec.describe "Station Show" do
       "status": "Available",
       "hours": "24 hours daily",
       "ev_network": nil,
+      "ev_connector_types": ["CHADEMO", "J1772COMBO"],
       "street_address": "2375 St Andrews Dr",
       "city": "Altoona",
       "state": "WI",
@@ -124,6 +125,13 @@ RSpec.describe "Station Show" do
         click_link("Favorite Station")
         expect(current_path).to eq(root_path)
         expect(page).to have_content("Please Log In")
+      end
+
+      it 'displays a message if station has no connector types listed', :vcr do
+        station1[:ev_connector_types] = nil
+        visit station_path(station1[:api_id])
+
+        expect(page).to have_content("Connector types are not listed for this station")
       end
     end
 
