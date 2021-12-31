@@ -131,7 +131,7 @@ RSpec.describe "Station Show" do
         station1[:ev_connector_types] = nil
         visit station_path(station1[:api_id])
 
-        expect(page).to have_content("Connector types are not listed for this station")
+        expect(page).to have_content("Connector types are unknown for this station")
       end
     end
 

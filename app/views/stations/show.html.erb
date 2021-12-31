@@ -7,7 +7,7 @@
 
   <h3>Connector Types:</h3>
   <% if @station.ev_connector_types.nil? %>
-    <span>Connector types are not listed for this station</span>
+    <span>Connector types are unknown for this station</span>
   <% else %>
     <% @station.ev_connector_types.each_with_index do |connector, index| %>
       <div id="connector-type-<%= index %>">
