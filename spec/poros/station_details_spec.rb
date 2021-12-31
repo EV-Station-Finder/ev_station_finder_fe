@@ -9,6 +9,7 @@ RSpec.describe StationDetails do
                          :status=>"Available",
                          :hours=>"24 hours daily",
                          :ev_network=>"Tesla Super Charger",
+                         :ev_connector_types=>["CHADEMO", "J1772COMBO"],
                          :street_address=>"2375 St Andrews Dr",
                          :city=>"Altoona",
                          :state=>"WI",
@@ -36,6 +37,7 @@ RSpec.describe StationDetails do
       expect(new_station.api_id).to eq(152087)
       expect(new_station.status).to eq("Available")
       expect(new_station.hours).to eq("24 hours daily")
+      expect(new_station.ev_connector_types).to eq(["CHADEMO", "J1772COMBO"])
       expect(new_station.ev_network).to eq("Tesla Super Charger")
       expect(new_station.street_address).to eq("2375 St Andrews Dr")
       expect(new_station.city).to eq("Altoona")

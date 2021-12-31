@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations/152087
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 29 Dec 2021 20:01:49 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"48a03354b4f803a5ceaa311c10243b4e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '096b6f4b-3cba-41b8-b1cf-ca5fe78f25ab'
+      X-Runtime:
+      - '0.328708'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
+        General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","ev_connector_types":null,"street_address":"2375
+        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
+        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"20:01
+        UTC","temperature":7.32,"conditions":"clear sky","icon":"01d"},{"time":"20:00
+        UTC","temperature":7.32,"conditions":"clear sky","icon":"01d"},{"time":"21:00
+        UTC","temperature":7.88,"conditions":"clear sky","icon":"01d"},{"time":"22:00
+        UTC","temperature":7.3,"conditions":"clear sky","icon":"01d"},{"time":"23:00
+        UTC","temperature":4.28,"conditions":"few clouds","icon":"02n"},{"time":"00:00
+        UTC","temperature":3.11,"conditions":"few clouds","icon":"02n"},{"time":"01:00
+        UTC","temperature":1.58,"conditions":"overcast clouds","icon":"04n"},{"time":"02:00
+        UTC","temperature":1.8,"conditions":"overcast clouds","icon":"04n"},{"time":"03:00
+        UTC","temperature":4.53,"conditions":"overcast clouds","icon":"04n"},{"time":"04:00
+        UTC","temperature":2.8,"conditions":"overcast clouds","icon":"04n"}]}}}'
+  recorded_at: Wed, 29 Dec 2021 20:01:50 GMT
+recorded_with: VCR 6.0.0

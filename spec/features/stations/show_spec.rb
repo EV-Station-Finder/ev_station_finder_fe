@@ -8,6 +8,7 @@ RSpec.describe "Station Show" do
       "status": "Available",
       "hours": "24 hours daily",
       "ev_network": nil,
+      "ev_connector_types": ["CHADEMO", "J1772COMBO"],
       "street_address": "2375 St Andrews Dr",
       "city": "Altoona",
       "state": "WI",
@@ -125,6 +126,13 @@ RSpec.describe "Station Show" do
         expect(current_path).to eq(root_path)
         expect(page).to have_content("Please Log In")
       end
+
+      it 'displays a message if station has no connector types listed', :vcr do
+        station1[:ev_connector_types] = nil
+        visit station_path(station1[:api_id])
+
+        expect(page).to have_content("Connector types are unknown for this station")
+      end
     end
 
     describe "As a logged in user, I visit the stations show page" do
@@ -152,10 +160,10 @@ RSpec.describe "Station Show" do
       end
 
       xit "displays link to unfavorite a station", :vcr do
-        click_link("Unfavorite Station")
-        expect(current_path).to eq(station_path(station1[:api_id]))
-        expect(page).to have_content("#{station1[:name]} has been added to your favorite stations")
-        click_link("Favorite Station")
+        # click_link("Unfavorite Station")
+        # expect(current_path).to eq(station_path(station1[:api_id]))
+        # expect(page).to have_content("#{station1[:name]} has been added to your favorite stations")
+        # click_link("Favorite Station")
       end
 
 
