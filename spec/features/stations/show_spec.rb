@@ -160,10 +160,10 @@ RSpec.describe "Station Show" do
       end
 
       xit "displays link to unfavorite a station", :vcr do
-        click_link("Unfavorite Station")
-        expect(current_path).to eq(station_path(station1[:api_id]))
-        expect(page).to have_content("#{station1[:name]} has been added to your favorite stations")
-        click_link("Favorite Station")
+        # click_link("Unfavorite Station")
+        # expect(current_path).to eq(station_path(station1[:api_id]))
+        # expect(page).to have_content("#{station1[:name]} has been added to your favorite stations")
+        # click_link("Favorite Station")
       end
 
 
