@@ -1,6 +1,6 @@
 <% cache "#{@station.name} #{@station.hourly_weather.second[:time]}" do %>
-  <h1><%= @station.name %></h1>
-  <span><%= link_to "Favorite Station", favorite_stations_path(api_id: @station.api_id, station_name: @station.name), method: :post  %></span>
+  <h1><%= @station.name %>
+  <%= link_to "Favorite Station", favorite_stations_path(api_id: @station.api_id, station_name: @station.name), method: :post  %></h1>
   <h3>Status: <%= @station.status %></h3>
   <h3>Hours: <%= @station.hours %></h3>
   <h3>EV Network: <%= @station.ev_network %></h3>
