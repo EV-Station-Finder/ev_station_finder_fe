@@ -14,4 +14,8 @@ class StationFacade
   def self.add_favorite_station(api_id, token)
     StationService.add_favorite_station(api_id, token)
   end
+  
+  def self.remove_favorite_station(api_id, token)
+    StationService.remove_favorite_station(api_id, token)
+  end
 end
