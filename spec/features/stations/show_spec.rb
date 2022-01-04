@@ -13,6 +13,7 @@ RSpec.describe "Station Show" do
       "city": "Altoona",
       "state": "WI",
       "zip_code": "54720",
+      "is_favorited": nil,
       "accepted_payments": [
         "American Express",
         "Discover",
@@ -96,16 +97,17 @@ RSpec.describe "Station Show" do
         expect(page).to have_content("Address: #{station1[:street_address]}, #{station1[:city]}, #{station1[:state]} #{station1[:zip_code]}")
         expect(page).to have_content("Status: #{station1[:status]}")
         expect(page).to have_content("Hours: #{station1[:hours]}")
-        # expect(page).to have_content("EV Network: #{station1[:ev_network]}")
+        expect(page).to have_content("EV Network: #{station1[:ev_network]}")
         expect(page).to have_content("10 Hour Forecast")
+        expect(page).to have_content("Connector Types:")
+        expect(page).to have_content("Connector types are unknown for this station")
         within("#forecast-0") do
           expect(page).to have_content(station1[:hourly_weather][0][:time])
           expect(page).to have_content(station1[:hourly_weather][0][:temperature].to_i)
           expect(page).to have_content(station1[:hourly_weather][0][:conditions])
-          # expect(page).to have_xpath("https://openweathermap.org/img/wn/#{station1[:hourly_weather][0][:icon]}@2x.png")
           expect(page).to have_css("img[src*='https://openweathermap.org/img/wn/#{station1[:hourly_weather][0][:icon]}@2x.png']")
         end
-        within("#accepted_payment-0") do
+        within("#accepted-payment-0") do
           expect(page).to have_content("American Express")
         end
       end
