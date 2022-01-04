@@ -35,7 +35,7 @@ RSpec.describe "Dashboard Page" do
                         "zip_code": "90016"
                       }
         within(".nearest-stations") do
-          expect(page).to have_content("Here are the 14 stations nearest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
+          expect(page).to have_content("Here are the 15 stations nearest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
         end
         
         within("#nearest-station-0") do

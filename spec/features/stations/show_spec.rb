@@ -21,9 +21,9 @@ RSpec.describe "Station Show" do
       ],
       "hourly_weather": [
         {
-          "time": "20:49",
-          "temperature": 30,
-          "conditions": "light snow",
+          "time": "18:44",
+          "temperature": 28,
+          "conditions": "few clouds",
           "icon": "04d"
         },
         {
