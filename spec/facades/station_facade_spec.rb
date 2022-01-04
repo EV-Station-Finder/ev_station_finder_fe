@@ -6,8 +6,9 @@ RSpec.describe StationFacade do
       location = "Denver, CO"
       result = StationFacade.get_stations(location)
 
-      expect(result).to be_a(Array)
-      expect(result[0]).to be_a Station
+      expect(result).to be_an(Array)
+      expect(result[0]).to be_a(Station)
+      expect(result[0].instance_variables.count).to eq(11)
     end
   end
   
@@ -17,6 +18,7 @@ RSpec.describe StationFacade do
       result = StationFacade.get_station(id)
 
       expect(result).to be_a StationDetails
+      expect(result.instance_variables.count).to eq(13)
     end
   end
 end
