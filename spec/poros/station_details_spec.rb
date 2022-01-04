@@ -14,6 +14,7 @@ RSpec.describe StationDetails do
                          :city=>"Altoona",
                          :state=>"WI",
                          :zip_code=>"54720",
+                         :is_favorited=>nil,
                          :accepted_payments=>["American Express", "Discover", "MasterCard", "Visa"],
                          :hourly_weather=>
                           [{:time=>"23:12", :temperature=>65.23, :conditions=>"scattered clouds", :icon=>"03d"},
@@ -43,6 +44,7 @@ RSpec.describe StationDetails do
       expect(new_station.city).to eq("Altoona")
       expect(new_station.state).to eq("WI")
       expect(new_station.zip_code).to eq("54720")
+      expect(new_station.is_favorited).to eq(nil)
       expect(new_station.accepted_payments).to eq(["American Express", "Discover", "MasterCard", "Visa"])
       hourly_weather = [{:time=>"23:12", :temperature=>65.23, :conditions=>"scattered clouds", :icon=>"03d"},
                        {:time=>"23:00", :temperature=>65.23, :conditions=>"scattered clouds", :icon=>"03d"},

@@ -9,6 +9,7 @@ class StationDetails
               :city,
               :state,
               :zip_code,
+              :is_favorited,
               :accepted_payments,
               :hourly_weather
 
@@ -23,6 +24,7 @@ class StationDetails
     @city               = station_data[:city]
     @state              = station_data[:state]
     @zip_code           = station_data[:zip_code]
+    @is_favorited       = station_data[:is_favorited]
     @accepted_payments  = station_data[:accepted_payments]
     @hourly_weather     = station_data[:hourly_weather]
   end

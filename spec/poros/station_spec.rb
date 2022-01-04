@@ -13,7 +13,8 @@ RSpec.describe Station do
                         "street_address": "900 E 11th Ave",
                         "city": "Denver",
                         "state": "CO",
-                        "zip_code": "80218"
+                        "zip_code": "80218",
+                        "is_favorited": nil
                        }
     end
 
@@ -31,6 +32,7 @@ RSpec.describe Station do
       expect(new_station.city).to eq("Denver")
       expect(new_station.state).to eq("CO")
       expect(new_station.zip_code).to eq("80218")
+      expect(new_station.is_favorited).to eq(nil)
     end
   end
 end

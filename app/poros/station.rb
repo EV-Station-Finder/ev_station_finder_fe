@@ -8,7 +8,8 @@ class Station
               :street_address,
               :city,
               :state,
-              :zip_code
+              :zip_code,
+              :is_favorited
 
   def initialize(station_data)
     @api_id         = station_data[:api_id]
@@ -21,5 +22,6 @@ class Station
     @city           = station_data[:city]
     @state          = station_data[:state]
     @zip_code       = station_data[:zip_code]
+    @is_favorited   = station_data[:is_favorited]
   end
 end
