@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   delete "/log_out", to: "sessions#destroy"
   resource :dashboard, only: :show
   resource :favorite_stations, only: :create
-  get '*path' => redirect('/')
+  match "*path", to: "application#catch_all", via: :all
 end
