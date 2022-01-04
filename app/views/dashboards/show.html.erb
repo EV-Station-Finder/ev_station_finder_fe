@@ -26,7 +26,7 @@
   <div class="column">
     <section class="nearest-stations">
       <h1>Nearest Stations:</h1>
-      <% if @nearest_stations.empty? %>
+      <% if @nearest_stations.class == Hash %>
         <h3>No stations were found near <%= @user_address  %></h3>
       <% else %>
           <h3>Here are the <%= @nearest_stations.count%> stations nearest to <%= @user_address  %></h3>
