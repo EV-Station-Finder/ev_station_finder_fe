@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations/152087
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations/152087?token
     body:
       encoding: US-ASCII
       string: ''
@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 29 Dec 2021 20:01:49 GMT
+      - Tue, 04 Jan 2022 18:44:56 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"48a03354b4f803a5ceaa311c10243b4e"
+      - W/"b57ad6d99a2fa741fcc3b98eb81d2fca"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '096b6f4b-3cba-41b8-b1cf-ca5fe78f25ab'
+      - 96f17f83-3b90-40bf-a6ae-cde42e9762cf
       X-Runtime:
-      - '0.328708'
+      - '0.349549'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -44,17 +44,17 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"station","attributes":{"name":"Casey''s
         General Store","api_id":152087,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","ev_connector_types":null,"street_address":"2375
-        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","accepted_payments":["American
-        Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"20:01
-        UTC","temperature":7.32,"conditions":"clear sky","icon":"01d"},{"time":"20:00
-        UTC","temperature":7.32,"conditions":"clear sky","icon":"01d"},{"time":"21:00
-        UTC","temperature":7.88,"conditions":"clear sky","icon":"01d"},{"time":"22:00
-        UTC","temperature":7.3,"conditions":"clear sky","icon":"01d"},{"time":"23:00
-        UTC","temperature":4.28,"conditions":"few clouds","icon":"02n"},{"time":"00:00
-        UTC","temperature":3.11,"conditions":"few clouds","icon":"02n"},{"time":"01:00
-        UTC","temperature":1.58,"conditions":"overcast clouds","icon":"04n"},{"time":"02:00
-        UTC","temperature":1.8,"conditions":"overcast clouds","icon":"04n"},{"time":"03:00
-        UTC","temperature":4.53,"conditions":"overcast clouds","icon":"04n"},{"time":"04:00
-        UTC","temperature":2.8,"conditions":"overcast clouds","icon":"04n"}]}}}'
-  recorded_at: Wed, 29 Dec 2021 20:01:50 GMT
+        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","is_favorited":"User
+        token not provided","accepted_payments":["American Express","Discover","MasterCard","Visa"],"hourly_weather":[{"time":"18:44
+        UTC","temperature":28.35,"conditions":"few clouds","icon":"02d"},{"time":"18:00
+        UTC","temperature":28.67,"conditions":"scattered clouds","icon":"03d"},{"time":"19:00
+        UTC","temperature":28.35,"conditions":"few clouds","icon":"02d"},{"time":"20:00
+        UTC","temperature":29.07,"conditions":"scattered clouds","icon":"03d"},{"time":"21:00
+        UTC","temperature":29.59,"conditions":"broken clouds","icon":"04d"},{"time":"22:00
+        UTC","temperature":29.73,"conditions":"broken clouds","icon":"04d"},{"time":"23:00
+        UTC","temperature":29.57,"conditions":"broken clouds","icon":"04n"},{"time":"00:00
+        UTC","temperature":29.37,"conditions":"overcast clouds","icon":"04n"},{"time":"01:00
+        UTC","temperature":28.62,"conditions":"overcast clouds","icon":"04n"},{"time":"02:00
+        UTC","temperature":28.11,"conditions":"light snow","icon":"13n"}]}}}'
+  recorded_at: Tue, 04 Jan 2022 18:44:57 GMT
 recorded_with: VCR 6.0.0

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 18 Nov 2021 19:36:49 GMT
+      - Tue, 04 Jan 2022 18:44:24 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -29,9 +29,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 48cdf857-6162-4434-a141-7220a20d4a7c
+      - 77da6d22-91ba-422d-b757-0cf6b845975a
       X-Runtime:
-      - '0.001656'
+      - '0.001674'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -41,5 +41,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":"Unauthorized"}'
-  recorded_at: Thu, 18 Nov 2021 19:36:49 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:25 GMT
 recorded_with: VCR 6.0.0

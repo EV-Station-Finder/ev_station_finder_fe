@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:33:18 GMT
+      - Tue, 04 Jan 2022 18:44:49 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -33,9 +33,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a097f11e-7114-4eb6-89c0-0fbd0ab9c569
+      - eb4ea2a1-1f5d-4947-918f-2f1d26c1968e
       X-Runtime:
-      - '0.258347'
+      - '0.248249'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -45,7 +45,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0","type":"user"}}'
-  recorded_at: Fri, 12 Nov 2021 18:33:19 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:50 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/authorize?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0
@@ -67,7 +67,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:33:18 GMT
+      - Tue, 04 Jan 2022 18:44:49 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -77,9 +77,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cf5799cd-a55b-4d5b-8f42-cc77662c5aa4
+      - ee3a284c-ff4d-40ed-833e-6d42c40d9821
       X-Runtime:
-      - '0.004332'
+      - '0.006375'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -89,7 +89,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0","type":"user"}}'
-  recorded_at: Fri, 12 Nov 2021 18:33:19 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:50 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0
@@ -111,7 +111,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:33:19 GMT
+      - Tue, 04 Jan 2022 18:44:49 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -121,9 +121,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 582c3609-ae0f-4a91-b9be-3ee6c4322544
+      - b603de1b-bfc9-4396-ab90-160f27942442
       X-Runtime:
-      - '0.003580'
+      - '0.008101'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -134,10 +134,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"user","attributes":{"first_name":"Harry","last_name":"Potter","email":"wizard@hogwarts.com","street_address":"3722
         Crenshaw Blvd.","city":"Los Angeles","state":"CA","zip_code":"90016"}}}'
-  recorded_at: Fri, 12 Nov 2021 18:33:19 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:50 GMT
 - request:
     method: get
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=3722%20Crenshaw%20Blvd.%20Los%20Angeles,%20CA%2090016
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=3722%20Crenshaw%20Blvd.%20Los%20Angeles,%20CA%2090016&token
     body:
       encoding: US-ASCII
       string: ''
@@ -156,19 +156,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:33:19 GMT
+      - Tue, 04 Jan 2022 18:44:50 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"61c2ac00113efc31fe51e5e452cff12e"
+      - W/"a42dac76f9999d80c131d3a797a20faf"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 16288e96-b2ae-49c9-b5fd-eec7fad7b1b0
+      - 328eb8c0-8613-4669-a77b-10b9cb6f2f6b
       X-Runtime:
-      - '0.412326'
+      - '0.166818'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -178,45 +178,63 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":null,"type":"station","attributes":{"name":"G\u0026M
-        OIL CHEVRON #111","distance":1.14178,"status":"Available","hours":"Mon 12:00am
+        OIL CHEVRON #111","distance":1.13745,"status":"Available","hours":"Mon 12:00am
         - 12:00am; Tue 12:00am - 12:00am; Wed 12:00am - 12:00am; Thu 12:00am - 12:00am;
         Fri 12:00am - 12:00am; Sat 12:00am - 12:00am; Sun 12:00am - 12:00am","ev_network":"ChargePoint
-        Network","street_address":"3600 South La Brea Ave","city":"Los Angeles","state":"CA","zip_code":"90016","api_id":182990}},{"id":null,"type":"station","attributes":{"name":"Sprouts
-        San Vicente","distance":2.15791,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"4918 San Vicente Blvd","city":"Los Angeles","state":"CA","zip_code":"90019","api_id":198929}},{"id":null,"type":"station","attributes":{"name":"CULVER
-        HONDA CULVERCPE200T","distance":3.22898,"status":"Available","hours":"24 hours
+        Network","street_address":"3600 South La Brea Ave","city":"Los Angeles","state":"CA","zip_code":"90016","api_id":182990,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Sprouts
+        San Vicente","distance":2.15766,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"4918 San Vicente Blvd","city":"Los Angeles","state":"CA","zip_code":"90019","api_id":198929,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Culver
+        City - LA Platform - Tesla Supercharger","distance":3.105,"status":"Available","hours":"24
+        hours daily","ev_network":"Tesla","street_address":"8850 Washington Blvd","city":"Culver
+        City","state":"CA","zip_code":"90232","api_id":201921,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"CULVER
+        HONDA CULVERCPE200T","distance":3.22484,"status":"Available","hours":"24 hours
         daily","ev_network":"ChargePoint Network","street_address":"9055 Washington
-        Blvd","city":"Culver City","state":"CA","zip_code":"90232","api_id":178356}},{"id":null,"type":"station","attributes":{"name":"University
-        of Southern California","distance":3.28275,"status":"Available","hours":"Faculty,
+        Blvd","city":"Culver City","state":"CA","zip_code":"90232","api_id":178356,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Venice
+        Crossroads","distance":3.28541,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"8985 Venice Blvd","city":"Los Angeles","state":"CA","zip_code":"90034","api_id":191985,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"University
+        of Southern California","distance":3.28705,"status":"Available","hours":"Faculty,
         staff, and student use only","ev_network":"Non-Networked","street_address":"357
-        W 35th St","city":"Los Angeles","state":"CA","zip_code":"90007","api_id":76704}},{"id":null,"type":"station","attributes":{"name":"Venice
-        Crossroads","distance":3.28951,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"8985 Venice Blvd","city":"Los Angeles","state":"CA","zip_code":"90034","api_id":191985}},{"id":null,"type":"station","attributes":{"name":"Petersen
-        Automotive Museum","distance":3.29802,"status":"Available","hours":"24 hours
+        W 35th St","city":"Los Angeles","state":"CA","zip_code":"90007","api_id":76704,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Petersen
+        Automotive Museum","distance":3.29673,"status":"Available","hours":"24 hours
         daily","ev_network":"eVgo Network","street_address":"6060 Wilshire Blvd","city":"Los
-        Angeles","state":"CA","zip_code":"90036","api_id":198212}},{"id":null,"type":"station","attributes":{"name":"Trader
-        Joe''s","distance":3.31636,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"9290 Culver Blvd","city":"Culver City","state":"CA","zip_code":"90232","api_id":198844}},{"id":null,"type":"station","attributes":{"name":"Nissan
-        of Downtown Los Angeles","distance":3.7155,"status":"Available","hours":"Dealership
+        Angeles","state":"CA","zip_code":"90036","api_id":198212,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Trader
+        Joe''s","distance":3.31217,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"9290 Culver Blvd","city":"Culver City","state":"CA","zip_code":"90232","api_id":198844,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Nissan
+        of Downtown Los Angeles","distance":3.71984,"status":"Available","hours":"Dealership
         business hours","ev_network":"Non-Networked","street_address":"635 W Washington
-        Blvd","city":"Los Angeles","state":"CA","zip_code":"90015","api_id":39906}},{"id":null,"type":"station","attributes":{"name":"Westfield
-        Culver City - Tesla Supercharger","distance":3.87285,"status":"Available","hours":"24
+        Blvd","city":"Los Angeles","state":"CA","zip_code":"90015","api_id":39906,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Westfield
+        Culver City - Tesla Supercharger","distance":3.8689,"status":"Available","hours":"24
         hours daily; for Tesla use only","ev_network":"Tesla","street_address":"6000
-        Sepulveda Blvd.","city":"Culver City","state":"CA","zip_code":"90230","api_id":102011}},{"id":null,"type":"station","attributes":{"name":"Veteran''s
-        Memorial Park","distance":3.92504,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"4117 Overland Ave","city":"Culver City","state":"CA","zip_code":"90230","api_id":198924}},{"id":null,"type":"station","attributes":{"name":"Culver
-        City Senior Center","distance":3.95394,"status":"Available","hours":"24 hours
+        Sepulveda Blvd.","city":"Culver City","state":"CA","zip_code":"90230","api_id":102011,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Veteran''s
+        Memorial Park","distance":3.92067,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"4117 Overland Ave","city":"Culver City","state":"CA","zip_code":"90230","api_id":198924,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Culver
+        City Senior Center","distance":3.94959,"status":"Available","hours":"24 hours
         daily","ev_network":"eVgo Network","street_address":"4095 Overland Ave","city":"Culver
-        City","state":"CA","zip_code":"90232","api_id":198923}},{"id":null,"type":"station","attributes":{"name":"Westfield
-        Culver City (Culver City, CA)","distance":4.06429,"status":"Available","hours":"24
+        City","state":"CA","zip_code":"90232","api_id":198923,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Westfield
+        Culver City (Culver City, CA)","distance":4.06027,"status":"Available","hours":"24
         hours daily","ev_network":"Electrify America","street_address":"6000 Sepulveda
-        Blvd","city":"Culver City","state":"CA","zip_code":"90230","api_id":199192}},{"id":null,"type":"station","attributes":{"name":"Inglewood
-        City Hall","distance":4.05682,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"105 S La Brea Ave","city":"Inglewood","state":"CA","zip_code":"90301","api_id":198371}},{"id":null,"type":"station","attributes":{"name":"Hotel
-        Indigo Los Angeles Downtown - Tesla Supercharger","distance":4.49929,"status":"Available","hours":"24
+        Blvd","city":"Culver City","state":"CA","zip_code":"90230","api_id":199192,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Inglewood
+        City Hall","distance":4.05496,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"105 S La Brea Ave","city":"Inglewood","state":"CA","zip_code":"90301","api_id":198371,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Hotel
+        Indigo Los Angeles Downtown - Tesla Supercharger","distance":4.5035,"status":"Available","hours":"24
         hours daily; for Tesla use only","ev_network":"Tesla","street_address":"899
-        South Francisco Street","city":"Los Angeles","state":"CA","zip_code":"90015","api_id":122275}}]}'
-  recorded_at: Fri, 12 Nov 2021 18:33:19 GMT
+        South Francisco Street","city":"Los Angeles","state":"CA","zip_code":"90015","api_id":122275,"is_favorited":"User
+        token not provided"}}]}'
+  recorded_at: Tue, 04 Jan 2022 18:44:51 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/favorite_stations?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0
@@ -238,19 +256,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:33:20 GMT
+      - Tue, 04 Jan 2022 18:44:51 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ca302c886adfe9cde8328939eac0672a"
+      - W/"e795bc2d7697e11a77912b29df5f03da"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c3315af6-4ed0-40fc-a09b-61baefc1ec13
+      - 32afbf17-aa54-4d20-9abc-b6df7a32f725
       X-Runtime:
-      - '0.399156'
+      - '1.013868'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -261,11 +279,37 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":null,"type":"station","attributes":{"name":"Casey''s
         General Store","distance":null,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"2375
-        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","api_id":152087}},{"id":null,"type":"station","attributes":{"name":"Murphy
+        St Andrews Dr","city":"Altoona","state":"WI","zip_code":"54720","api_id":152087,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Murphy
         Express","distance":null,"status":"Available","hours":"24 hours daily; Also
         accepts Murphy USA Fleet Card","ev_network":"Non-Networked","street_address":"1358
-        Wyoming Blvd NE","city":"Albuquerque","state":"NM","zip_code":"87112","api_id":152070}}]}'
-  recorded_at: Fri, 12 Nov 2021 18:33:20 GMT
+        Wyoming Blvd NE","city":"Albuquerque","state":"NM","zip_code":"87112","api_id":152070,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Ideal
+        Market Capitol Hill","distance":null,"status":"Available","hours":"24 hours
+        daily","ev_network":"eVgo Network","street_address":"900 E 11th Ave","city":"Denver","state":"CO","zip_code":"80218","api_id":198643,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"G\u0026M
+        OIL CHEVRON #111","distance":null,"status":"Available","hours":"Mon 12:00am
+        - 12:00am; Tue 12:00am - 12:00am; Wed 12:00am - 12:00am; Thu 12:00am - 12:00am;
+        Fri 12:00am - 12:00am; Sat 12:00am - 12:00am; Sun 12:00am - 12:00am","ev_network":"ChargePoint
+        Network","street_address":"3600 South La Brea Ave","city":"Los Angeles","state":"CA","zip_code":"90016","api_id":182990,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Sprouts
+        San Vicente","distance":null,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"4918 San Vicente Blvd","city":"Los Angeles","state":"CA","zip_code":"90019","api_id":198929,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"University
+        of Southern California","distance":null,"status":"Available","hours":"Faculty,
+        staff, and student use only","ev_network":"Non-Networked","street_address":"357
+        W 35th St","city":"Los Angeles","state":"CA","zip_code":"90007","api_id":76704,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"The
+        Fashion Centre at Pentagon City","distance":null,"status":"Available","hours":"24
+        hours daily","ev_network":"eVgo Network","street_address":"1100 S Hayes St","city":"Arlington","state":"VA","zip_code":"22202","api_id":198572,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Trader
+        Joe''s","distance":null,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"9290 Culver Blvd","city":"Culver City","state":"CA","zip_code":"90232","api_id":198844,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Casey''s
+        General Store","distance":null,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"1410
+        S Bell School Rd","city":"Rockford","state":"IL","zip_code":"61108","api_id":152086,"is_favorited":"User
+        token not provided"}}]}'
+  recorded_at: Tue, 04 Jan 2022 18:44:52 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/authorize?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0
@@ -287,7 +331,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:33:19 GMT
+      - Tue, 04 Jan 2022 18:44:52 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -297,9 +341,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8b93bb54-61ec-406b-8ff3-5ea96465e727
+      - 44a7270e-9cdc-4059-8d6c-e038adff11f6
       X-Runtime:
-      - '0.004109'
+      - '0.006062'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -309,5 +353,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.3OYbz0b_cd-GHBpNcVA6USSRbwCe8ugeA6ZqYeoItq0","type":"user"}}'
-  recorded_at: Fri, 12 Nov 2021 18:33:20 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:52 GMT
 recorded_with: VCR 6.0.0

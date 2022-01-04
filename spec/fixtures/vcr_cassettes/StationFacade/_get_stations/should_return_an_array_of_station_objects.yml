@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=Denver,%20CO
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=Denver,%20CO&token
     body:
       encoding: US-ASCII
       string: ''
@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 02 Oct 2021 15:47:36 GMT
+      - Tue, 04 Jan 2022 18:44:20 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"426ce91361500a05b33af7cc4a75c052"
+      - W/"4ed8c6a622dd726e3a82692cb9c3c9c5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 03527030-1e40-47cd-ba99-dd85bb21eeeb
+      - 8c854c9f-9c3f-41ab-931e-cdb096ae4b19
       X-Runtime:
-      - '0.447865'
+      - '0.234864'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -42,34 +42,53 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":null,"type":"stations","attributes":{"name":"Ideal Market
+      string: '{"data":[{"id":null,"type":"station","attributes":{"name":"Ideal Market
         Capitol Hill","distance":0.59729,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"900 E 11th Ave","city":"Denver","state":"CO","zip_code":"80218"}},{"id":null,"type":"stations","attributes":{"name":"City
+        Network","street_address":"900 E 11th Ave","city":"Denver","state":"CO","zip_code":"80218","api_id":198643,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"City
         of Denver - Denver Performing Arts Center Garage","distance":0.79883,"status":"Available","hours":"24
         hours daily; pay lot","ev_network":"Non-Networked","street_address":"1055
-        13th St","city":"Denver","state":"CO","zip_code":"80204"}},{"id":null,"type":"stations","attributes":{"name":"ALLIANCE
+        13th St","city":"Denver","state":"CO","zip_code":"80204","api_id":50066,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"ALLIANCE
         CENTER FAST CHARGER 1","distance":1.24426,"status":"Available","hours":"24
         hours daily","ev_network":"ChargePoint Network","street_address":"1536 Wynkoop
-        St","city":"Denver","state":"CO","zip_code":"80202"}},{"id":null,"type":"stations","attributes":{"name":"Whole
+        St","city":"Denver","state":"CO","zip_code":"80202","api_id":86037,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Whole
         Foods - Union Station","distance":1.41921,"status":"Available","hours":"24
-        hours daily","ev_network":"eVgo Network","street_address":"1701 Wewatta St","city":"Denver","state":"CO","zip_code":"80202"}},{"id":null,"type":"stations","attributes":{"name":"REI","distance":1.81163,"status":"Available","hours":"24
-        hours daily","ev_network":"eVgo Network","street_address":"1416 Platte St","city":"Denver","state":"CO","zip_code":"80202"}},{"id":null,"type":"stations","attributes":{"name":"EMICH
+        hours daily","ev_network":"eVgo Network","street_address":"1701 Wewatta St","city":"Denver","state":"CO","zip_code":"80202","api_id":198243,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"REI","distance":1.81163,"status":"Available","hours":"24
+        hours daily","ev_network":"eVgo Network","street_address":"1416 Platte St","city":"Denver","state":"CO","zip_code":"80202","api_id":198959,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"EMICH
         VW STATION 1","distance":2.03461,"status":"Available","hours":"24 hours daily","ev_network":"ChargePoint
-        Network","street_address":"350 S Santa Fe Dr","city":"Denver","state":"CO","zip_code":"80223"}},{"id":null,"type":"stations","attributes":{"name":"EMICH
+        Network","street_address":"350 S Santa Fe Dr","city":"Denver","state":"CO","zip_code":"80223","api_id":189345,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"EMICH
         VW STATION 2","distance":2.03611,"status":"Available","hours":"24 hours daily","ev_network":"ChargePoint
-        Network","street_address":"350 S Santa Fe Dr","city":"Denver","state":"CO","zip_code":"80223"}},{"id":null,"type":"stations","attributes":{"name":"Kroger
+        Network","street_address":"350 S Santa Fe Dr","city":"Denver","state":"CO","zip_code":"80223","api_id":189344,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Kroger
         King Soopers 124 (Glendale, CO)","distance":3.41681,"status":"Available","hours":"24
         hours daily","ev_network":"Electrify America","street_address":"4600 Leetsdale
-        Rd","city":"Glendale","state":"CO","zip_code":"80246"}},{"id":null,"type":"stations","attributes":{"name":"BMW
+        Rd","city":"Glendale","state":"CO","zip_code":"80246","api_id":191771,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"BMW
         OF DENVER DC FAST 03","distance":3.66728,"status":"Available","hours":"24
         hours daily","ev_network":"ChargePoint Network","street_address":"1030 S Colorado
-        Blvd","city":"Denver","state":"CO","zip_code":"80246"}},{"id":null,"type":"stations","attributes":{"name":"BMW
+        Blvd","city":"Denver","state":"CO","zip_code":"80246","api_id":165780,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Albertsons
+        Denver #2714","distance":3.70199,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
+        Network","street_address":"6220 E 14th Ave","city":"Denver","state":"CO","zip_code":"80220","api_id":202060,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"BMW
         OF DENVER DC FAST 01","distance":3.72391,"status":"Available","hours":"24
         hours daily","ev_network":"ChargePoint Network","street_address":"1040 S Colorado
-        Blvd","city":"Denver","state":"CO","zip_code":"80246"}},{"id":null,"type":"stations","attributes":{"name":"Target
+        Blvd","city":"Denver","state":"CO","zip_code":"80246","api_id":179805,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Target
         T2225","distance":3.75976,"status":"Available","hours":"24 hours daily","ev_network":"Electrify
-        America","street_address":"1985 Sheridan Blvd.","city":"Edgewater","state":"CO","zip_code":"80214"}},{"id":null,"type":"stations","attributes":{"name":"Monaco
+        America","street_address":"1985 Sheridan Blvd.","city":"Edgewater","state":"CO","zip_code":"80214","api_id":152119,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Boulevard
+        1 - Tesla Supercharger","distance":4.44426,"status":"Available","hours":"24
+        hours daily; for Tesla use only","ev_network":"Tesla","street_address":"1st
+        Avenue and Monaco Parkway","city":"Denver","state":"CO","zip_code":"80220","api_id":197425,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Monaco
         Square","distance":4.69307,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"942 S Monaco Pkwy","city":"Denver","state":"CO","zip_code":"80224"}}]}'
-  recorded_at: Sat, 02 Oct 2021 15:47:37 GMT
+        Network","street_address":"942 S Monaco Pkwy","city":"Denver","state":"CO","zip_code":"80224","api_id":198931,"is_favorited":"User
+        token not provided"}}]}'
+  recorded_at: Tue, 04 Jan 2022 18:44:21 GMT
 recorded_with: VCR 6.0.0

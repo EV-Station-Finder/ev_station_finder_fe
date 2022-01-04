@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=Las%20Vegas,%20Nevada
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=Las%20Vegas,%20Nevada&token
     body:
       encoding: US-ASCII
       string: ''
@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 08 Nov 2021 17:10:53 GMT
+      - Tue, 04 Jan 2022 18:45:08 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4284a6c4a9278a41c76a98501239453d"
+      - W/"21f9a03d67d8cd86cd66b922a4e37bab"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fca71aae-aeb0-49a0-8d89-b47342fd7593
+      - ec5338d8-2660-40e5-8b33-c9d7dca5a92e
       X-Runtime:
-      - '0.489111'
+      - '0.079036'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -45,22 +45,33 @@ http_interactions:
       string: '{"data":[{"id":null,"type":"station","attributes":{"name":"Las Vegas,
         NV - Bridger Avenue - Tesla Supercharger","distance":0.25186,"status":"Available","hours":"24
         hours daily; for Tesla use only","ev_network":"Tesla","street_address":"701
-        Bridger Ave","city":"Las Vegas","state":"NV","zip_code":"89101","api_id":102317}},{"id":null,"type":"station","attributes":{"name":"Las
+        Bridger Ave","city":"Las Vegas","state":"NV","zip_code":"89101","api_id":102317,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Las
         Vegas North Premium Outlets - Tesla Supercharger","distance":1.0514,"status":"Available","hours":"24
         hours daily; for Tesla use only","ev_network":"Tesla","street_address":"875
-        South Grand Central Parkway","city":"Las Vegas","state":"NV","zip_code":"89106","api_id":166933}},{"id":null,"type":"station","attributes":{"name":"Terrible
+        South Grand Central Parkway","city":"Las Vegas","state":"NV","zip_code":"89106","api_id":166933,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Terrible
         Herbst","distance":1.29603,"status":"Available","hours":"24 hours daily","ev_network":"eVgo
-        Network","street_address":"1500 W Bonanza Rd","city":"Las Vegas","state":"NV","zip_code":"89106","api_id":198280}},{"id":null,"type":"station","attributes":{"name":"Terrible
+        Network","street_address":"1500 W Bonanza Rd","city":"Las Vegas","state":"NV","zip_code":"89106","api_id":198280,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Terrible
         Herbst","distance":3.14455,"status":"Available","hours":"24 hours daily","ev_network":"Non-Networked","street_address":"22625
-        Highway-161","city":"Jean","state":"NV","zip_code":"89019","api_id":165774}},{"id":null,"type":"station","attributes":{"name":"Target
+        Highway-161","city":"Jean","state":"NV","zip_code":"89019","api_id":165774,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Target
         T0265 (Paradise, NV)","distance":3.69025,"status":"Available","hours":"24
         hours daily","ev_network":"Electrify America","street_address":"4001 S Maryland
-        Pkwy","city":"Las Vegas","state":"NV","zip_code":"89119","api_id":199194}},{"id":null,"type":"station","attributes":{"name":"The
+        Pkwy","city":"Las Vegas","state":"NV","zip_code":"89119","api_id":199194,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"The
         Linq Promenade - Tesla Supercharger","distance":3.94031,"status":"Available","hours":"24
         hours daily; for Tesla use only","ev_network":"Tesla","street_address":"3545
-        South Las Vegas Boulevard","city":"Las Vegas","state":"NV","zip_code":"89109","api_id":149321}},{"id":null,"type":"station","attributes":{"name":"Forum
+        South Las Vegas Boulevard","city":"Las Vegas","state":"NV","zip_code":"89109","api_id":149321,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Forum
         Shops at Caesars Palace (Las Vegas, NV)","distance":3.96921,"status":"Available","hours":"24
         hours daily","ev_network":"Electrify America","street_address":"3500 S Las
-        Vegas Blvd","city":"Las Vegas","state":"NV","zip_code":"89109","api_id":192704}}]}'
-  recorded_at: Mon, 08 Nov 2021 17:10:53 GMT
+        Vegas Blvd","city":"Las Vegas","state":"NV","zip_code":"89109","api_id":192704,"is_favorited":"User
+        token not provided"}},{"id":null,"type":"station","attributes":{"name":"Kroger
+        Smiths 354 (Whitney, NV)","distance":4.53997,"status":"Available","hours":"24
+        hours daily","ev_network":"Electrify America","street_address":"3850 E Flamingo
+        Rd","city":"Las Vegas","state":"NV","zip_code":"89121","api_id":201631,"is_favorited":"User
+        token not provided"}}]}'
+  recorded_at: Tue, 04 Jan 2022 18:45:09 GMT
 recorded_with: VCR 6.0.0

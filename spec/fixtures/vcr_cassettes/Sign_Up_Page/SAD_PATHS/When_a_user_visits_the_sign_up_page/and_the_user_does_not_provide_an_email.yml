@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:39:48 GMT
+      - Tue, 04 Jan 2022 18:45:05 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - '0542291b-20d2-41e9-abe0-589878dc70b3'
+      - ac6a8cf7-f91a-4eaf-8975-fb2b49b4adb4
       X-Runtime:
-      - '0.279487'
+      - '0.278779'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -43,5 +43,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":"Validation failed: Email can''t be blank, Email is invalid"}'
-  recorded_at: Fri, 12 Nov 2021 18:39:48 GMT
+  recorded_at: Tue, 04 Jan 2022 18:45:05 GMT
 recorded_with: VCR 6.0.0

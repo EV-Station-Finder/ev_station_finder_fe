@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:30:34 GMT
+      - Tue, 04 Jan 2022 18:44:44 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -33,9 +33,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1f21f9d4-f805-44ab-83ee-2b0467bff160
+      - bc364e9b-a4ff-48eb-b7fe-2e5a2207a162
       X-Runtime:
-      - '0.250280'
+      - '0.273075'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -45,7 +45,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU","type":"user"}}'
-  recorded_at: Fri, 12 Nov 2021 18:30:34 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:45 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/authorize?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU
@@ -67,7 +67,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:30:34 GMT
+      - Tue, 04 Jan 2022 18:44:45 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -77,9 +77,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 57039d25-0a85-4181-9c48-5963100a4c14
+      - d3c790f1-67a1-4353-a30e-7e64d54c4d04
       X-Runtime:
-      - '0.003180'
+      - '0.006804'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -89,7 +89,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU","type":"user"}}'
-  recorded_at: Fri, 12 Nov 2021 18:30:34 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:45 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU
@@ -111,7 +111,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:30:34 GMT
+      - Tue, 04 Jan 2022 18:44:45 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -121,9 +121,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 95146e15-99b0-4fb8-8c0d-f2ad35ff4cc2
+      - 3e82f676-19c9-4bc8-a137-cc005dde65d8
       X-Runtime:
-      - '0.003598'
+      - '0.006888'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -134,10 +134,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"user","attributes":{"first_name":"Elon","last_name":"Musk","email":"musky@example.com","street_address":"1712
         Av Circunvalacion","city":"Cochabamba","state":"Bolivia","zip_code":"11111"}}}'
-  recorded_at: Fri, 12 Nov 2021 18:30:34 GMT
+  recorded_at: Tue, 04 Jan 2022 18:44:45 GMT
 - request:
     method: get
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=1712%20Av%20Circunvalacion%20Cochabamba,%20Bolivia%2011111
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=1712%20Av%20Circunvalacion%20Cochabamba,%20Bolivia%2011111&token
     body:
       encoding: US-ASCII
       string: ''
@@ -150,57 +150,13 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - Cowboy
       Date:
-      - Fri, 12 Nov 2021 18:30:34 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 14e595bf-cf6f-4dda-a6a3-199aa4299137
-      X-Runtime:
-      - '0.365052'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Fri, 12 Nov 2021 18:30:35 GMT
-- request:
-    method: get
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/favorite_stations?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.4.3
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 422
-      message: Unprocessable Entity
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 12 Nov 2021 18:30:35 GMT
+      - Tue, 04 Jan 2022 18:44:46 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -208,9 +164,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d29fb635-b27c-4d99-a5b2-c9a2b0550804
+      - 8414abc6-109d-4a82-a26f-e851619b3209
       X-Runtime:
-      - '0.006300'
+      - '0.461215'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -219,6 +175,6 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"errors":"User has no favorite stations"}'
-  recorded_at: Fri, 12 Nov 2021 18:30:35 GMT
+      string: '{"errors":"A valid location must be provided"}'
+  recorded_at: Tue, 04 Jan 2022 18:44:46 GMT
 recorded_with: VCR 6.0.0
