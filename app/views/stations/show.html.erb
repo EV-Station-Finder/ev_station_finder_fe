@@ -1,6 +1,12 @@
 <% cache "#{@station.name} #{@station.hourly_weather.second[:time]}" do %>
   <h1><%= @station.name %>
-  <%= link_to "Favorite Station", favorite_stations_path(api_id: @station.api_id, station_name: @station.name), method: :post  %></h1>
+  <% if @station.is_favorited == false %>
+    <%= link_to "Favorite Station", favorite_stations_path(api_id: @station.api_id, station_name: @station.name), method: :post  %></h1>
+  <% elsif @station.is_favorited == true %>
+    <%= link_to "Unfavorite Station", favorite_stations_path(api_id: @station.api_id, station_name: @station.name), method: :delete  %></h1>
+  <% else %>
+    <% "" %>
+  <% end %>
   <h3>Status: <%= @station.status %></h3>
   <h3>Hours: <%= @station.hours %></h3>
   <h3>EV Network: <%= @station.ev_network %></h3>
