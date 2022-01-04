@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authorize
-  # protect_from_forgery with: :exception #TODO: Study this code
+  protect_from_forgery with: :exception
   
   def catch_all
     redirect '/'
