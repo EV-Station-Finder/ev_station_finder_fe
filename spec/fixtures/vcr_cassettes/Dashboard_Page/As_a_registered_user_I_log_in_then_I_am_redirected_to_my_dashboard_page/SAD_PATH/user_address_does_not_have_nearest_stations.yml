@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 04 Jan 2022 18:44:44 GMT
+      - Tue, 04 Jan 2022 19:13:21 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -33,9 +33,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bc364e9b-a4ff-48eb-b7fe-2e5a2207a162
+      - d043dce6-b60b-433a-8fc4-645236eb8198
       X-Runtime:
-      - '0.273075'
+      - '0.335593'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -45,7 +45,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU","type":"user"}}'
-  recorded_at: Tue, 04 Jan 2022 18:44:45 GMT
+  recorded_at: Tue, 04 Jan 2022 19:13:22 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/authorize?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU
@@ -67,7 +67,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 04 Jan 2022 18:44:45 GMT
+      - Tue, 04 Jan 2022 19:13:22 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -77,9 +77,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d3c790f1-67a1-4353-a30e-7e64d54c4d04
+      - c48bdbd3-1c5b-4782-abfe-e81d1cc1c109
       X-Runtime:
-      - '0.006804'
+      - '0.010564'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -89,7 +89,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU","type":"user"}}'
-  recorded_at: Tue, 04 Jan 2022 18:44:45 GMT
+  recorded_at: Tue, 04 Jan 2022 19:13:22 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU
@@ -111,7 +111,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 04 Jan 2022 18:44:45 GMT
+      - Tue, 04 Jan 2022 19:13:22 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -121,9 +121,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3e82f676-19c9-4bc8-a137-cc005dde65d8
+      - 2f9d6762-964d-4a0b-b9d9-70bc72cc2e38
       X-Runtime:
-      - '0.006888'
+      - '0.006974'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -134,7 +134,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"user","attributes":{"first_name":"Elon","last_name":"Musk","email":"musky@example.com","street_address":"1712
         Av Circunvalacion","city":"Cochabamba","state":"Bolivia","zip_code":"11111"}}}'
-  recorded_at: Tue, 04 Jan 2022 18:44:45 GMT
+  recorded_at: Tue, 04 Jan 2022 19:13:22 GMT
 - request:
     method: get
     uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=1712%20Av%20Circunvalacion%20Cochabamba,%20Bolivia%2011111&token
@@ -156,7 +156,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 04 Jan 2022 18:44:46 GMT
+      - Tue, 04 Jan 2022 19:13:22 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -164,9 +164,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 8414abc6-109d-4a82-a26f-e851619b3209
+      - cf093e70-7a13-425c-a82d-4ec6a1c4e062
       X-Runtime:
-      - '0.461215'
+      - '0.175424'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -176,5 +176,47 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"errors":"A valid location must be provided"}'
-  recorded_at: Tue, 04 Jan 2022 18:44:46 GMT
+  recorded_at: Tue, 04 Jan 2022 19:13:23 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/favorite_stations?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4fQ.O_QbPtFQJ1FA1L-U4JSB-44p2P7AdQkXvcTLUn4BWyU
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 04 Jan 2022 19:13:23 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - f53c9266-a8ec-4c63-9abd-871ce47312f5
+      X-Runtime:
+      - '0.012126'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":"User has no favorite stations"}'
+  recorded_at: Tue, 04 Jan 2022 19:13:23 GMT
 recorded_with: VCR 6.0.0
