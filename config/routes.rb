@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   post "/log_in", to: "sessions#create"
   delete "/log_out", to: "sessions#destroy"
   resource :dashboard, only: :show
-  resource :favorite_stations, only: :create
+  resource :favorite_stations, only: [:create, :destroy]
   match "*path", to: "application#catch_all", via: :all
 end
