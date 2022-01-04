@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "Station Show" do
-  describe "HAPPY PATH" do
     let(:station1) { {
       "name": "Casey's General Store",
       "api_id": 152087,
@@ -88,7 +87,8 @@ RSpec.describe "Station Show" do
       "name": "G&M OIL CHEVRON #111",
       "api_id": 182990
       } }
-
+      
+  describe "HAPPY PATH" do
     describe "As a guest user, I visit the stations show page" do
       it "displays a single station attributes", :vcr do
         visit station_path(station1[:api_id])
@@ -121,12 +121,11 @@ RSpec.describe "Station Show" do
       it "does not display favorite station link"
       # TODO: decide if this will lead to registration page, if we want it to display an alternative link, or not display anything
 
-      it "redirects guest to welcome page if favorite station link is clicked", :vcr do
+      it "Guest users do not see the favorite station link", :vcr do
         visit station_path(station1[:api_id])
         expect(current_path).to eq(station_path(station1[:api_id]))
-        click_link("Favorite Station")
-        expect(current_path).to eq(root_path)
-        expect(page).to have_content("Please Log In")
+        expect(page).to_not have_link("Favorite Station")
+        expect(page).to_not have_link("Unfavorite Station")
       end
 
       it 'displays a message if station has no connector types listed', :vcr do
@@ -143,31 +142,22 @@ RSpec.describe "Station Show" do
         fill_in :email, with: "wizard@hogwarts.com"
         fill_in :password, with: "verysecurepassword"
         click_button 'Log In'
-        click_link "G&M OIL CHEVRON #111"
+        within("#nearest-station-0") do   
+          click_link "G&M OIL CHEVRON #111"
+        end
       end
 
-      it "display link to favorite a station", :vcr do
+      it "display link to favorite and unfavorite a station" do #TODO: , :vcr
+        # Favorite Station
         expect(current_path).to eq(station_path(station2[:api_id]))
         click_link("Favorite Station")
         expect(current_path).to eq(station_path(station2[:api_id]))
         expect(page).to have_content("#{station2[:name]} has been added to your favorite stations")
-
-        visit dashboard_path
-
-        within("#favorite-station-3") do
-          expect(page).to have_content(station2[:name])
-        end
-        # TODO: Remove station 2 from favorites once point has been created
+        # Unfavorite Station
         # click_link("Unfavorite Station")
+        # expect(current_path).to eq(station_path(station2[:api_id]))
+        # expect(page).to have_content("#{station2[:name]} has been added to your favorite stations")
       end
-
-      xit "displays link to unfavorite a station", :vcr do
-        # click_link("Unfavorite Station")
-        # expect(current_path).to eq(station_path(station1[:api_id]))
-        # expect(page).to have_content("#{station1[:name]} has been added to your favorite stations")
-        # click_link("Favorite Station")
-      end
-
 
       it "displays the logout link", :vcr do
         expect(page).to have_link("Log Out")
