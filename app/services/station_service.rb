@@ -1,13 +1,16 @@
 class StationService
-  def self.get_stations(location)
+  def self.get_stations(location, user_token=nil)
     response = conn.get("/api/v1/stations") do |faraday|
       faraday.params['location'] = location
+      faraday.params['token'] = user_token
     end
     parse_json(response)
   end
 
-  def self.get_station(api_id)
-    response = conn.get("/api/v1/stations/#{api_id}")
+  def self.get_station(api_id, user_token=nil)
+    response = conn.get("/api/v1/stations/#{api_id}") do |faraday|
+      faraday.params['token'] = user_token
+    end
     parse_json(response)
   end
 

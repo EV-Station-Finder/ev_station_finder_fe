@@ -1,13 +1,17 @@
 class StationFacade
-  def self.get_stations(location)
-    stations = StationService.get_stations(location)
-    stations[:data].map do |station|
-      Station.new(station[:attributes])
+  def self.get_stations(location, user_token=nil)
+    stations = StationService.get_stations(location, user_token)
+    if stations[:errors]
+      stations
+    else
+      stations[:data].map do |station|
+        Station.new(station[:attributes])
+      end
     end
   end
 
-  def self.get_station(api_id)
-    station = StationService.get_station(api_id)
+  def self.get_station(api_id, user_token=nil)
+    station = StationService.get_station(api_id, user_token)
     StationDetails.new(station[:data][:attributes])
   end
   
