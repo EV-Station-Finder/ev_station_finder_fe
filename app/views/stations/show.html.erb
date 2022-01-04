@@ -17,7 +17,7 @@
   <% end %>
   <h3>Accepted Payments:</h3>
   <% @station.accepted_payments.each_with_index do |payment, index| %>
-    <div id="accepted_payment-<%= index %>">
+    <div id="accepted-payment-<%= index %>">
       <h3><li><%= payment %></li></h3>
     </div>
   <% end %>
