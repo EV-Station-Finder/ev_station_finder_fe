@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?city=c&email=elonmusk3@example.com&first_name=fn&last_name=ln&password=pw&state=s&street_address=sa&zip_code=12345
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?city=c&email=elonmusk4@example.com&first_name=fn&last_name=ln&password=pw&state=s&street_address=sa&zip_code=12345
     body:
       encoding: UTF-8
       string: ''
@@ -17,23 +17,25 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 201
+      message: Created
     headers:
       Server:
       - Cowboy
       Date:
-      - Tue, 04 Jan 2022 18:45:03 GMT
+      - Wed, 05 Jan 2022 16:58:13 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"bc2e6c05c6a6a741ade84e7b83333499"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0dc6baec-1cec-44de-8890-c075849cc30f
+      - b6d2f5f6-3ee0-43f3-a8ef-d1f300fb399d
       X-Runtime:
-      - '0.295976'
+      - '0.324764'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -42,6 +44,183 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"errors":"Validation failed: Email has already been taken"}'
-  recorded_at: Tue, 04 Jan 2022 18:45:04 GMT
+      string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNX0.ybnWHYxRWUTvPuTbpk8jtAu-9VBoxiYAojVSGUk-D3c","type":"user"}}'
+  recorded_at: Wed, 05 Jan 2022 16:58:14 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/authorize?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNX0.ybnWHYxRWUTvPuTbpk8jtAu-9VBoxiYAojVSGUk-D3c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Jan 2022 16:58:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bc2e6c05c6a6a741ade84e7b83333499"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5aea288a-9ac5-47b1-9d8f-ecda6d0fd739
+      X-Runtime:
+      - '0.004259'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNX0.ybnWHYxRWUTvPuTbpk8jtAu-9VBoxiYAojVSGUk-D3c","type":"user"}}'
+  recorded_at: Wed, 05 Jan 2022 16:58:14 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/users?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNX0.ybnWHYxRWUTvPuTbpk8jtAu-9VBoxiYAojVSGUk-D3c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Jan 2022 16:58:14 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4c127ae1982202b5cb8b459770eee0f6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3f550128-c6cd-43cd-92d3-3df9f6d4941c
+      X-Runtime:
+      - '0.007858'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"user","attributes":{"first_name":"fn","last_name":"ln","email":"elonmusk4@example.com","street_address":"sa","city":"c","state":"s","zip_code":"12345"}}}'
+  recorded_at: Wed, 05 Jan 2022 16:58:14 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/stations?location=sa%20c,%20s%2012345&token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Jan 2022 16:58:15 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4c0df341ac874ac82d692500c0a80567"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 60e9e7c5-a339-4728-a634-990135ff5164
+      X-Runtime:
+      - '0.661885'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":null,"type":"station","attributes":{"name":"SCOTIA EVCHARGE
+        SCOTIA LEVEL 3","distance":1.48156,"status":"Available","hours":"24 hours
+        daily","ev_network":"ChargePoint Network","street_address":"138 Mohawk Ave","city":"Scotia","state":"NY","zip_code":"12302","api_id":155135,"is_favorited":"User
+        token not provided"}}]}'
+  recorded_at: Wed, 05 Jan 2022 16:58:15 GMT
+- request:
+    method: get
+    uri: https://ev-station-finder-backend.herokuapp.com/api/v1/favorite_stations?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNX0.ybnWHYxRWUTvPuTbpk8jtAu-9VBoxiYAojVSGUk-D3c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Jan 2022 16:58:15 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 66cc8d6b-9620-42f8-849c-251fae4b098d
+      X-Runtime:
+      - '0.007881'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":"User has no favorite stations"}'
+  recorded_at: Wed, 05 Jan 2022 16:58:15 GMT
 recorded_with: VCR 6.0.0
