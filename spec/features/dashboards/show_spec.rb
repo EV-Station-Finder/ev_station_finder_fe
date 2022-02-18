@@ -37,7 +37,7 @@ RSpec.describe "Dashboard Page" do
         within(".nearest-stations") do
           expect(page).to have_content("Here are the 14 stations nearest to 3722 Crenshaw Blvd. Los Angeles, CA 90016")
         end
-        
+
         within("#nearest-station-0") do
           expect(page).to have_content(@station1[:name])
           expect(page).to have_content(@station1[:street_address])
@@ -91,6 +91,25 @@ RSpec.describe "Dashboard Page" do
       it "redirects to dashboard when user is logged in and tries to visit the home page", :vcr do
         visit root_path
         expect(current_path).to eq(dashboard_path)
+      end
+
+      context 'nearest stations shows a favorite station' do
+        it "displays 'favorited' if already saved as favorite" do
+          @station1 =  {
+                          "name": "G&M OIL CHEVRON #111",
+                          "distance": 1.13745,
+                          "status": "Available",
+                          "hours": "Mon 12:00am - 12:00am; Tue 12:00am - 12:00am; Wed 12:00am - 12:00am; Thu 12:00am - 12:00am; Fri 12:00am - 12:00am; Sat 12:00am - 12:00am; Sun 12:00am - 12:00am",
+                          "ev_network": "ChargePoint Network",
+                          "street_address": "3600 South La Brea Ave",
+                          "city": "Los Angeles",
+                          "state": "CA",
+                          "zip_code": "90016"
+                        }
+          within("#nearest-station-0") do
+            expect(page).to have_content("#{@station1[:name]} - favorited")
+          end
+        end
       end
     end
 
