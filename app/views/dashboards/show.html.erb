@@ -33,7 +33,11 @@
           <% @nearest_stations.each_with_index do |station, index| %>
           <% cache station.api_id do %>
             <div id="nearest-station-<%= index %>">
-              <h3><%= link_to "#{station.name}", station_path(station.api_id), method: :get %></h3>
+              <% if @favorites.include?(station.api_id) %>
+                <h3><%= link_to "#{station.name} - favorited", station_path(station.api_id), method: :get %></h3>
+              <% else %>
+                <h3><%= link_to "#{station.name}", station_path(station.api_id), method: :get %></h3>
+              <% end %>
               <p><%= station.street_address %></p>
               <p><%= "#{station.city}, #{station.state} #{station.zip_code}"  %></p>
               <p>Status: <%= station.status %></p>
